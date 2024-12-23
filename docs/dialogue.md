@@ -49,7 +49,7 @@ The correct answer is 3.
 
 ## **Q0**. Describe the conclusion
 
-- A conclusing drawn from the data
+- A conclusion drawn from the data
   is that the extreme body masses
   are likelier to survive. Would you agree that the data supports
   this claim?
@@ -60,7 +60,7 @@ The correct answer is 3.
 
 ## **Q1**: Ask if the conclusion is correct
 
-- A conclusing drawn from the data
+- A conclusion drawn from the data
   is that the extreme body masses
   are likelier to survive. Would you agree that the data supports
   this claim?
@@ -72,7 +72,7 @@ The correct answer is 3.
 
 ## **Q2**: Ask if the conclusion is correct
 
-- A conclusing drawn from the data
+- A conclusion drawn from the data
   is that the extreme body masses
   are likelier to survive. Would you agree that the data supports
   this claim?

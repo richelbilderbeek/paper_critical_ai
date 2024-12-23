@@ -1,4 +1,4 @@
-# Can AI be used for academic critical thinking? A pregistered example
+# Can AI be used for academic critical thinking? A preregistered example
 
 - Authors: RJCB, JMS
 
@@ -46,7 +46,7 @@ and agree with the paper's conclusion,
 else the experiment has failed).
 Then the dialogue is extended,
 where the AI is ask to reproduce a different
-plot, which would reject the orignal paper's conclusion.
+plot, which would reject the original paper's conclusion.
 Will the AI be able to change its mind?
 
 ## Hypothesis

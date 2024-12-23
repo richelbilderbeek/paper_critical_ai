@@ -1,4 +1,4 @@
-# Can AI be used for academic critical thinking? A pregistered example
+# Can AI be used for academic critical thinking? A preregistered example
 
 - [Paper](paper.md)
     - [Abstract](paper.md#abstract)
