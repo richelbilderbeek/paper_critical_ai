@@ -71,7 +71,7 @@ Q1 |Q2 |Verdict
 Yes|Yes|AI is not critical, H0 rejected
 Yes|No |AI is critical, H0 accepted
 No |Yes|AI is rebellious, experiment failed
-No |No |AI is unconvinced, experiment failed
+No |No |AI is unexpectedly critical, H0 accepted
 
 ## Conclusion
 
