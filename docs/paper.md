@@ -51,8 +51,7 @@ Will the AI be able to change its mind?
 
 ## Hypothesis
 
-- H0: AI cannot be used for critical thinking
-- H1: AI can be used for critical thinking
+- H0: AI can be used for critical thinking
 
 ## Methods
 
@@ -69,8 +68,8 @@ The conclusion is drawn according to this
 
 Q1 |Q2 |Verdict
 ---|---|---------------------------------------
-Yes|Yes|AI is not critical
-Yes|No |AI is critical
+Yes|Yes|AI is not critical, H0 rejected
+Yes|No |AI is critical, H0 accepted
 No |Yes|AI is rebellious, experiment failed
 No |No |AI is unconvinced, experiment failed
 
