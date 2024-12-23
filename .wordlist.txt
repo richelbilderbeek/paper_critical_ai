@@ -1,6 +1,5 @@
 Richel
 Richèl
-conclusing
 config
 dataset
 faq
@@ -12,7 +11,6 @@ linter
 markdownlint
 markdownlintignore
 mlc
-pregistered
 txt
 wordlist
 www
