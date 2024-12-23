@@ -12,6 +12,8 @@ nav:
     - Paper discussion: paper_discussion.md
     - Pilot study: pilot_study.md
   - Misc:
+    - Code of conduct: CODE_OF_CONDUCT.md
+    - Contributing: CONTRIBUTING.md
     - License: LICENSE.md
 
 theme:
