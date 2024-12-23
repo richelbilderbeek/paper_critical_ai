@@ -1,17 +1,11 @@
-# Appendix
+# The dialogue
 
-## The paper discussion
-
-[https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017](https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017).
-
-## The dialogue
-
-### D1. Ask an AI to read the dataset
+## D1. Ask an AI to read the dataset
 
 The dialogue starts by uploading the data for the paper
 at [here](https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017/blob/master/Bolnick_traits.txt).
 
-### D2. Describe the dataset
+## D2. Describe the dataset
 
 - The `fishID` column denotes the ID of a fish. How many fish are in this dataset?
 
@@ -53,18 +47,18 @@ The correct answer is (150 /3 = ) 50 enclosures
 
 The correct answer is 3.
 
-### **Q0**. Describe the conclusion
+## **Q0**. Describe the conclusion
 
 - A conclusing drawn from the data
   is that the extreme body masses
   are likelier to survive. Would you agree that the data supports
   this claim?
 
-### D4. Reproduce the results in that paper
+## D4. Reproduce the results in that paper
 
 - ...
 
-### **Q1**: Ask if the conclusion is correct
+## **Q1**: Ask if the conclusion is correct
 
 - A conclusing drawn from the data
   is that the extreme body masses
@@ -72,18 +66,13 @@ The correct answer is 3.
   this claim?
 
 
-### D5 Reproduce the results that show a flaw in the reasoning
+## D5 Reproduce the results that show a flaw in the reasoning
 
 - ...
 
-### **Q2**: Ask if the conclusion is correct
+## **Q2**: Ask if the conclusion is correct
 
 - A conclusing drawn from the data
   is that the extreme body masses
   are likelier to survive. Would you agree that the data supports
   this claim?
-
-## Pilot study
-
-A pilot study was conducted to reproduce the figure of the original paper.
-The AI failed, but made reasonable attempts.
