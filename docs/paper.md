@@ -1,6 +1,6 @@
 # Can AI be used for academic critical thinking? A preregistered example
 
-- Authors: RJCB, JMS
+- Authors: [RJCB, ?AR, JMS](https://github.com/richelbilderbeek/paper_critical_ai/issues/4)
 
 ## Abstract
 
