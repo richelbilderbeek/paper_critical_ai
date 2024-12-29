@@ -1,6 +1,6 @@
 # Paper
 
-<!-- markdownlint-disable MD013 -->
+<!-- markdownlint-disable MD013 --><!-- Badges cannot be split up over lines, hence will break 80 characters per line -->
 
 [![Check dialogue code](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/check_dialogue_code.yaml/badge.svg?branch=main)](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/check_dialogue_code.yaml)
 [![Check links](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/check_links.yaml/badge.svg?branch=main)](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/check_links.yaml)
