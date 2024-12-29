@@ -27,8 +27,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install TeX Live
-        uses: zauguin/install-texlive@v3
+      - name: Install pdflatex
+        run: sudo apt-get install texlive-latex-base
+
+      - name: Get pdflatex version
+        run: pdflatex --version
 
       - uses: r-lib/actions/setup-r@v2
 
