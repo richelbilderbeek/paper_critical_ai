@@ -1,12 +1,15 @@
 # Can AI be used for academic critical thinking? A preregistered example
 
-- Authors: [RJCB, ?AR, JMS](https://github.com/richelbilderbeek/paper_critical_ai/issues/4)
+- [Authors](https://github.com/richelbilderbeek/paper_critical_ai/issues/4):
+  RJCB, ?AR, JMS
 
 ## Abstract
 
 AI does stuff.
 Can it do the critical thinking as required by academia?
-Here we test this on a known [known how, I don't think discussions in a seminar is enough to make that established] flawed paper,
+Here we test this on a known
+[known how, I don't think discussions in a seminar
+is enough to make that established] flawed paper,
 where we steer it to reproduce the same plots
 and draw its own conclusion, as well as confront
 it with the conclusion of the paper.
@@ -44,7 +47,7 @@ in which we tell an AI about a paper and its conclusion,
 after which we let it reproduce the paper's results (we
 assume the AI will be able to reproduce the experiment's results
 and agree with the paper's conclusion,
-else the experiment has failed). 
+else the experiment has failed).
 [to me the order here is not super clear. why do we need to tell AI about
 paper to begin with? could we not let it look at the data, and reproduce
 results, and then see if it would go along with specific sections of
@@ -55,11 +58,12 @@ plot, which would reject the original paper's conclusion.
 Will the AI be able to change its mind?
 
 ## Lit review
+
 what is critical thinking?
 
 ## Hypothesis
 
-- H0: AI can be used for critical thinking 
+- H0: AI can be used for critical thinking
 [no H1: AI cannot be used for critical thinking]
 
 ## Methods
@@ -69,7 +73,7 @@ The preregistration can be found at
 
 ### Choice of AI
 
-We picked an AI that can read data from files. 
+We picked an AI that can read data from files.
 [I think we should test more than one AI if possible]
 
 ### Experiment
