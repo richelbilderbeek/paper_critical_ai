@@ -6,7 +6,7 @@
 
 AI does stuff.
 Can it do the critical thinking as required by academia?
-Here we test this on a known flawed paper,
+Here we test this on a known [known how, ] flawed paper,
 where we steer it to reproduce the same plots
 and draw its own conclusion, as well as confront
 it with the conclusion of the paper.
