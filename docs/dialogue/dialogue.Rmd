@@ -42,6 +42,7 @@ anomous_enclosures <- c("L20", "L25", "L6", "L7", "S22", "S24")
 cage_mass_mean_for_l1 <- 1.256667
 cage_mass_stdev_for_l1 <- 0.4532475
 cage_mass_mean_deviation_sd_for_l1 <- c(1.1546303, -0.5662836, -0.5883466)
+
 abs_cage_mass_mean_deviation_sd_for_l1 <- abs(cage_mass_mean_deviation_sd_for_l1)
 ```
 
@@ -338,6 +339,67 @@ testthat::expect_equal(
 The values of `cage_mass_mean_deviation_sd` for enclosure `L1`
 are expected to be `r abs_cage_mass_mean_deviation_sd_for_l1`.
 
+### D4.4: reproduce the plot
+
+Ask the AI:
+
+> Create a scatter plot of this data:
+> - Each point is a fish. 
+> - Use a blue color for fish
+>   that have 'Lake' as their origin.
+> - Use a green color for fish
+>   that have 'Stream' as their origin.
+> - On the X axis, put the values of `cage_mass_mean_deviation_sd`
+>   of each fish
+> - On the Y axis, put the `survived` of each fish.
+> - Put the fish in four categories:
+>   - Fish that have an `origin` of 'Lake' and
+>     a `transplant` of 'Lake' are in category 'LL'
+>   - Fish that have an `origin` of 'Lake' and
+>     a `transplant` of 'Stream' are in category 'LS'
+>   - Fish that have an `origin` of 'Stream' and
+>     a `transplant` of 'Lake' are in category 'SL'
+>   - Fish that have an `origin` of 'Stream' and
+>     a `transplant` of 'Stream' are in category 'SS'
+> - Show a trendline for each binomal fit on each of these 4 categories.
+>   - Use blue lines for categories that originate from a lake
+>   - Use green lines for categories that originate from a stream
+>   - Use solid lines for categories 'LL' and 'SS'
+>   - Use dashed lines for categories 'LS' and 'SL'
+
+This should reproduce the plot in the paper:
+
+```{r}
+t_4$origin_transplant <- paste0(
+  stringr::str_sub(t_4$origin,1 ,1),
+  stringr::str_sub(t_4$transplant,1 ,1)
+)
+ggplot2::ggplot(
+  data = t_4,
+  ggplot2::aes(
+    x = cage_mass_mean_deviation_sd,
+    y = survived,
+    color = origin_transplant,
+    lty = origin_transplant
+  )
+) + ggplot2::scale_color_manual(
+    values = c("blue", "blue", "green", "green")
+  ) + 
+  ggplot2::scale_linetype_manual(
+    values = c("solid", "dashed", "dashed", "solid")
+  ) +
+  ggplot2::geom_point() +
+  ggplot2::geom_smooth(
+    method = "glm",
+    method.args = list(family = "binomial"),
+    se = FALSE
+  ) 
+
+# No idea how to get that P
+# + ggpmisc::stat_poly_eq(ggpmisc::use_label("eq"))
+```
+
+
 ## **Q1**: Ask if the conclusion is correct
 
 - A conclusion drawn from the data
@@ -348,7 +410,106 @@ are expected to be `r abs_cage_mass_mean_deviation_sd_for_l1`.
 
 ## D5 Reproduce the results that show a flaw in the reasoning
 
-- ...
+Ask the AI:
+
+> To make a better comparison, we are going to standarize
+> body masses per enclosure. Add a column to the
+> data called `cage_mass_mean_deviation_sd_rel`.
+> Its values are calculated per fish.
+> Each fish its `cage_mass_mean_deviation_sd_rel`
+> equals the difference between its `pre_mass`
+> and its enclosure's `cage_mass_mean`, 
+> divided by the `cage_mass_stdev` of its enclosure.
+> Could you show me the data for enclosure L1?
+
+```{r}
+cage_mass_mean_deviation_sd_per_fish_rel <- t_4 |> 
+  dplyr::select(fishID, pre_mass, cage_mass_mean, cage_mass_stdev) |>
+  dplyr::group_by(fishID) |>
+  dplyr::mutate(
+    cage_mass_mean_deviation_sd_rel = 
+      (pre_mass - cage_mass_mean) / cage_mass_stdev
+  ) |>
+  dplyr::select(fishID, cage_mass_mean_deviation_sd_rel)
+testthat::expect_equal(
+  nrow(cage_mass_mean_deviation_sd_per_fish_rel),
+  n_fish_transplanted
+)
+
+testthat::expect_equal(
+  nrow(t_4),
+  n_fish_transplanted
+)
+t_5 <- merge(t_4, cage_mass_mean_deviation_sd_per_fish_rel)
+testthat::expect_equal(
+  nrow(t_5),
+  n_fish_transplanted
+)
+
+knitr::kable(head(t_5))
+knitr::kable(t_5[t_5$enclosure == "L1", ])
+testthat::expect_equal(
+  t_5[t_5$enclosure == "L1", ]$cage_mass_mean_deviation_sd_rel,
+  cage_mass_mean_deviation_sd_for_l1,
+  tolerance = 1.0e-6
+)
+```
+
+
+
+Ask the AI:
+
+> Create a scatter plot of this data:
+> - Each point is a fish. 
+> - Use a blue color for fish
+>   that have 'Lake' as their origin.
+> - Use a green color for fish
+>   that have 'Stream' as their origin.
+> - On the X axis, put the values of `cage_mass_mean_deviation_sd_rel`
+>   of each fish
+> - On the Y axis, put the `survived` of each fish.
+> - Put the fish in four categories:
+>   - Fish that have an `origin` of 'Lake' and
+>     a `transplant` of 'Lake' are in category 'LL'
+>   - Fish that have an `origin` of 'Lake' and
+>     a `transplant` of 'Stream' are in category 'LS'
+>   - Fish that have an `origin` of 'Stream' and
+>     a `transplant` of 'Lake' are in category 'SL'
+>   - Fish that have an `origin` of 'Stream' and
+>     a `transplant` of 'Stream' are in category 'SS'
+> - Show a trendline for each binomal fit on each of these 4 categories.
+>   - Use blue lines for categories that originate from a lake
+>   - Use green lines for categories that originate from a stream
+>   - Use solid lines for categories 'LL' and 'SS'
+>   - Use dashed lines for categories 'LS' and 'SL'
+
+This should reproduce the suggest plot:
+
+```{r}
+ggplot2::ggplot(
+  data = t_5,
+  ggplot2::aes(
+    x = cage_mass_mean_deviation_sd_rel,
+    y = survived,
+    color = origin_transplant,
+    lty = origin_transplant
+  )
+) + ggplot2::scale_color_manual(
+    values = c("blue", "blue", "green", "green")
+  ) + 
+  ggplot2::scale_linetype_manual(
+    values = c("solid", "dashed", "dashed", "solid")
+  ) +
+  ggplot2::geom_point() +
+  ggplot2::geom_smooth(
+    method = "glm",
+    method.args = list(family = "binomial"),
+    se = FALSE
+  ) 
+
+# No idea how to get that P
+# + ggpmisc::stat_poly_eq(ggpmisc::use_label("eq"))
+```
 
 ## **Q2**: Ask if the conclusion is correct
 
