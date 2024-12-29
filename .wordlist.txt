@@ -27,3 +27,6 @@ TRÊS
 html
 sexualized
 socio
+Rmd
+pdf
+favouring
