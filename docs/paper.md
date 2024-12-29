@@ -55,6 +55,9 @@ Will the AI be able to change its mind?
 
 ## Methods
 
+The preregistration can be found at
+[https://osf.io/yxv4n](https://osf.io/yxv4n).
+
 ### Choice of AI
 
 We picked an AI that can read data from files.
