@@ -55,6 +55,12 @@ Will the AI be able to change its mind?
 
 ## Methods
 
+### Choice of AI
+
+We picked an AI that can read data from files.
+
+### Experiment
+
 - Take a dataset and the code of a published paper with a known flaw
 - D1. Ask an AI to read the dataset
 - D2. Describe the dataset
@@ -63,6 +69,10 @@ Will the AI be able to change its mind?
 - **Q1**: Ask if the conclusion is correct
 - D5 Reproduce the results that show a flaw in the reasoning
 - **Q2**: Ask if the conclusion is correct
+
+The exact dialogue can be found at [dialogue/README.md](dialogue/README.md).
+
+### Drawing conclusions
 
 The conclusion is drawn according to this
 
@@ -75,7 +85,11 @@ No |No |AI is unexpectedly critical, H0 accepted
 
 ## Conclusion
 
-...
+We found ...
+
+This paper concludes that AI can/cannot be
+used to critically think about an academic
+paper.
 
 ## Discussion
 
