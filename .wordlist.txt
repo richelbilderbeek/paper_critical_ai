@@ -30,3 +30,5 @@ socio
 Rmd
 pdf
 favouring
+README
+md
