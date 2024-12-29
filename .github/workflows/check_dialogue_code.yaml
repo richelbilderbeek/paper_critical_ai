@@ -4,15 +4,17 @@ name: Check dialogue code
 # Check this on the 16th day of the month.
 # 16th as the first letter of this repo is the 16th letter in the alphabet.
 
-# This job only concerns changes to one file.
+# This job only concerns changes to a limited set of files.
 # Thanks to https://stackoverflow.com/a/63822945
 on:
   push:
     paths:
       - docs/dialogue/dialogue.Rmd
+      - .github/workflows/check_dialogue_code.yaml
   pull_request:
     paths:
       - docs/dialogue/dialogue.Rmd
+      - .github/workflows/check_dialogue_code.yaml
   schedule:
   - cron: "0 0 16 * *"
 
@@ -38,6 +40,8 @@ jobs:
             remotes::install_cran("ggplot2")
             remotes::install_cran("dplyr")
             remotes::install_cran("svglite")
+            remotes::install_cran("rmarkdown")
+            remotes::install_cran("knitr")
         shell: Rscript {0}
 
       - name: Run
