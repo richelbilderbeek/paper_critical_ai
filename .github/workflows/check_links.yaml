@@ -1,7 +1,7 @@
 # Check that all links are valid, i.e. not broken
 name: Check links
 
-# Check links on the 16th day of the month.
+# Check this on the 16th day of the month.
 # 16th as the first letter of this repo is the 16th letter in the alphabet.
 on:
   push:

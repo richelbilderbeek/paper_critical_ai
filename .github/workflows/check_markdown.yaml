@@ -1,7 +1,7 @@
 # Check that there is correct markdown in all files
 name: Check markdown
 
-# Check markdown on the 16th day of the month.
+# Check this on the 16th day of the month.
 # 16th as the first letter of this repo is the 16th letter in the alphabet.
 on:
   push:
