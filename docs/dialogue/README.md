@@ -1,5 +1,7 @@
 # The dialogue
 
+The dialogue can be found at [dialogue.Rmd](dialogue.Rmd).
+
 ## D1. Ask an AI to read the dataset
 
 The dialogue starts by uploading the data for the paper
@@ -25,7 +27,7 @@ The correct answers is 'Lake' and 'Stream' and 'Control'
 - Remove the rows for which the `transplant` value is 'Control'. How
   many fish are left?
 
-The correct answer is (300 / 2 =) 150.
+The correct answer is 240.
 
 - The `pre_mass` column denotes the mass of a fish before the transplantation.
   What is the range of the values in this column?
@@ -36,16 +38,19 @@ The correct answer is 0.5 to 3.6.
   where 0 means it died and 1 means that it survived.
   How many fish died? And how many survived?
 
-The correct answers are ... and ...
+The correct answers are 89 died and 151 survived.
 
 - The `enclosure` column denotes the ID of an enclosure.
   How many enclosures are in this dataset?
 
-The correct answer is (150 /3 = ) 50 enclosures
+The correct answer is 80 enclosures
 
 - How many fish are in each enclosure?
 
-The correct answer is 3.
+The correct answer is:
+- 3 enclosures have 2 fish
+- 74 enclosures have 3 fish 
+- 3 enclosures have 4 fish 
 
 ## **Q0**. Describe the conclusion
 
@@ -56,7 +61,21 @@ The correct answer is 3.
 
 ## D4. Reproduce the results in that paper
 
-- ...
+- To make a better comparison, we are going to standarize
+  body masses per enclosure. Add a column to the
+  data called `cage_mass_mean` which holds the average
+  `pre_mass` within the enclosure each fish is in.
+  Could you show me the data for enclosure L1?
+
+For enclose L1, the expected  `cage_mass_mean` 
+for each of the fish is 1.256667.
+
+- Add a column to the
+  data called `cage_mass_stdev` which holds the standard
+  deviation of the body masses within
+  the enclosure each fish is in.
+  
+  
 
 ## **Q1**: Ask if the conclusion is correct
 

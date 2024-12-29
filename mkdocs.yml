@@ -8,7 +8,7 @@ nav:
   - Paper:
     - Paper: paper.md
   - Appendix:
-    - Dialogue: dialogue.md
+    - Dialogue: dialogue/README.md
     - Paper discussion: paper_discussion/README.md
     - Pilot study: pilot_study.md
   - Misc:
