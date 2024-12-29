@@ -49,7 +49,7 @@ where the AI is ask to reproduce a different
 plot, which would reject the original paper's conclusion.
 Will the AI be able to change its mind?
 
-##Lit review
+## Lit review
 what is critical thinking?
 
 ## Hypothesis
