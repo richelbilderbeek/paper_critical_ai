@@ -6,6 +6,7 @@
 [![Check markdown](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/check_markdown.yaml/badge.svg?branch=main)](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/check_markdown.yaml)
 [![Check spelling](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/check_spelling.yaml/badge.svg?branch=main)](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/check_spelling.yaml)
 [![Create website](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/create_website.yaml/badge.svg?branch=main)](https://github.com/richelbilderbeek/paper_critical_ai/actions/workflows/create_website.yaml)
+[![DOI](https://zenodo.org/badge/907400713.svg)](https://doi.org/10.5281/zenodo.14568773)
 
 <!-- markdownlint-enable MD013 -->
 
