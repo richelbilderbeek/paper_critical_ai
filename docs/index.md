@@ -9,7 +9,7 @@
     - [Discussion](paper.md#discussion)
     - [References](paper.md#references)
 - Appendix
-    - [Dialogue](dialogue.md)
+    - [Dialogue](dialogue/README.md)
     - [Paper discussion](paper_discussion.md)
     - [Pilot study](pilot_study.md)
 
