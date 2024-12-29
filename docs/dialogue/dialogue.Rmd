@@ -76,10 +76,7 @@ testthat::expect_equal(
 
 
 ```{r d1_read_data}
-t_all <- readr::read_csv(
-  "data_with_added_cols.csv", 
-  show_col_types = FALSE
-)
+t_all <- read.csv("Bolnick_traits.txt", sep = " ")
 ```
 
 ### D1.2: show first rows
