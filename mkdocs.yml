@@ -9,7 +9,7 @@ nav:
     - Paper: paper.md
   - Appendix:
     - Dialogue: dialogue.md
-    - Paper discussion: paper_discussion.md
+    - Paper discussion: paper_discussion/README.md
     - Pilot study: pilot_study.md
   - Misc:
     - Code of conduct: CODE_OF_CONDUCT.md
