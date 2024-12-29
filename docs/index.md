@@ -10,7 +10,7 @@
     - [References](paper.md#references)
 - Appendix
     - [Dialogue](dialogue/README.md)
-    - [Paper discussion](paper_discussion.md)
+    - [Paper discussion](paper_discussion/README.md)
     - [Pilot study](pilot_study.md)
 
 How to cite:
