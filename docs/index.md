@@ -1,5 +1,7 @@
 # Can AI be used for academic critical thinking? A preregistered example
 
+[![DOI](https://zenodo.org/badge/907400713.svg)](https://doi.org/10.5281/zenodo.14568773)
+
 - [Paper](paper.md)
     - [Abstract](paper.md#abstract)
     - [Introduction](paper.md#abstract)
@@ -18,4 +20,3 @@ How to cite:
 ```text
 Citation here
 ```
-
