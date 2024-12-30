@@ -70,6 +70,8 @@ Ask the AI:
 
     Could you show the first rows of the data?
 
+Expected:
+
     knitr::kable(head(t_all))
 
 <table>
@@ -315,6 +317,8 @@ Ask the AI:
 
     The `fishID` column denotes the ID of a fish. How many fish are in this dataset?
 
+Expected:
+
     expect_equal(total_n_fish, length(unique(t$fishID)))
 
 The expected answer is 300.
@@ -325,6 +329,8 @@ Ask the AI:
 
     The `origin` column denotes the location where each fish comes from.
     What are the locations the fish come from?
+
+Expected:
 
     expect_equal(unique(t$origin), origin_values)
 
@@ -338,6 +344,8 @@ Ask the AI:
     transplanted to.
     What are the locations the fish are transplanted to?
 
+Expected:
+
     expect_equal(unique(t$transplant), transplanted_values)
 
 The correct answers is Lake, Stream, Control.
@@ -348,6 +356,8 @@ Ask the AI:
 
     Remove the rows for which the `transplant` value is 'Control'.
     How many fish are left?
+
+Expected:
 
     t_1 <- t |> dplyr::filter(transplant != "Control") 
     expect_equal(n_fish_transplanted, length(unique(t_1$fishID)))
@@ -362,6 +372,8 @@ Ask the AI:
     before the transplantation.
     What is the range of the values in this column?
 
+Expected:
+
     expect_equal(lowest_pre_mass, min(t_1$pre_mass))
     expect_equal(highest_pre_mass, max(t_1$pre_mass))
 
@@ -375,6 +387,8 @@ Ask the AI:
     where 0 means it died and 1 means that it survived.
     How many fish died? And how many survived?
 
+Expected:
+
     expect_equal(n_survived, sum(t_1$survived == TRUE))
     expect_equal(n_died, sum(t_1$survived == FALSE))
 
@@ -387,6 +401,8 @@ Ask the AI:
     The `enclosure` column denotes the ID of an enclosure.
     How many enclosures are in this dataset?
 
+Expected:
+
     expect_equal(n_enclosures, length(unique(t_1$enclosure)))
 
 The correct answer is 80 enclosures.
@@ -396,6 +412,8 @@ The correct answer is 80 enclosures.
 Ask the AI:
 
     How many fish are in each enclosure?
+
+Expected:
 
     n_fish_per_enclosure <- dplyr::count(t_1, enclosure)
     expect_equal(n_enclosures_with_2_fish, sum(n_fish_per_enclosure$n == 2))
@@ -509,6 +527,8 @@ Ask the AI:
     data called `cage_mass_mean` which holds the average
     `pre_mass` within the enclosure each fish is in.
     Could you show me the data for enclosure L1?
+
+Expected:
 
     cage_mass_mean_per_enclosure <- t_1 |> 
       dplyr::select(enclosure, pre_mass) |>
@@ -669,6 +689,8 @@ Ask the AI:
     deviation of the `pre_mass` distribution of each enclosure
     each fish is in.
     Could you show me the data for enclosure L1?
+
+Expected:
 
     cage_mass_stdev_per_enclosure <- t_2 |> 
       dplyr::select(enclosure, pre_mass) |>
@@ -842,6 +864,8 @@ Ask the AI:
     and its enclosure's `cage_mass_mean`, 
     divided by the `cage_mass_stdev` of its enclosure.
     Could you show me the data for enclosure L1?
+
+Expected:
 
     cage_mass_mean_deviation_sd_per_fish <- t_3 |> 
       dplyr::select(fishID, pre_mass, cage_mass_mean, cage_mass_stdev) |>
@@ -1069,7 +1093,7 @@ Ask the AI:
       - Use solid lines for categories 'LL' and 'SS'
       - Use dashed lines for categories 'LS' and 'SL'
 
-This should reproduce the plot in the paper:
+Expected is the plot in the paper:
 
     t_4$origin_transplant <- paste0(
       stringr::str_sub(t_4$origin,1 ,1),
@@ -1124,6 +1148,8 @@ Ask the AI:
     and its enclosure's `cage_mass_mean`, 
     divided by the `cage_mass_stdev` of its enclosure.
     Could you show me the data for enclosure L1?
+
+Expected:
 
     cage_mass_mean_deviation_sd_per_fish_rel <- t_4 |> 
       dplyr::select(fishID, pre_mass, cage_mass_mean, cage_mass_stdev) |>
@@ -1374,7 +1400,7 @@ Ask the AI:
        - Use solid lines for categories 'LL' and 'SS'
        - Use dashed lines for categories 'LS' and 'SL'
 
-This should reproduce a suggest plot:
+This should produce this plot:
 
     ggplot2::ggplot(
       data = t_5,
@@ -1443,9 +1469,8 @@ Ask the AI:
        - Use solid lines for categories 'LL' and 'SS'
        - Use dashed lines for categories 'LS' and 'SL'
 
-The only change is to use a parabolic fit.
-
-This should reproduce a suggest plot:
+The only change is to use a parabolic fit. This should reproduce this
+plot:
 
     ggplot2::ggplot(
       data = t_5,
