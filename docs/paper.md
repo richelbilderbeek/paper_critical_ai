@@ -64,7 +64,24 @@ what is critical thinking?
 ## Hypothesis
 
 - H0: AI can be used for critical thinking
-[no H1: AI cannot be used for critical thinking]
+
+???- question "Why no H1?"
+
+    As remarked by JMS, H1 'AI cannot be used for critical thinking'
+    is missing. I (RJCB) think that adding H1 would be redundant.
+    
+    I would agree that, when there are more hypotheses,
+    to start numbering hypotheses from one, e.g. H1 and onwards
+    (i.e. don't start counting from zero)
+
+    We can vote on whether H1 (as a complement to H0) should be added.
+
+- [NEW] H1: AI will agree that using an absolute normalized body mass
+  on the x-axis and a survival status on the y-axis is a
+  good way to show that extreme body masses have a higher fitness
+- [NEW] H2: AI will agree that using an relative normalized body mass
+  on the x-axis and a survival status on the y-axis is a
+  good way to show that extreme body masses have a higher fitness
 
 ## Methods
 
