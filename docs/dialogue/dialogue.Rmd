@@ -100,6 +100,8 @@ Ask the AI:
 Could you show the first rows of the data?
 ```
 
+Expected:
+
 ```{r d1_show_first_rows}
 knitr::kable(head(t_all))
 ```
@@ -122,6 +124,8 @@ Ask the AI:
 The `fishID` column denotes the ID of a fish. How many fish are in this dataset?
 ```
 
+Expected:
+
 ```{r d2_count_fish}
 expect_equal(total_n_fish, length(unique(t$fishID)))
 ```
@@ -136,6 +140,8 @@ Ask the AI:
 The `origin` column denotes the location where each fish comes from.
 What are the locations the fish come from?
 ```
+
+Expected:
 
 ```{r d2_get_origin_values}
 expect_equal(unique(t$origin), origin_values)
@@ -153,6 +159,8 @@ transplanted to.
 What are the locations the fish are transplanted to?
 ```
 
+Expected:
+
 ```{r d2_get_transplant_values}
 expect_equal(unique(t$transplant), transplanted_values)
 ```
@@ -167,6 +175,8 @@ Ask the AI:
 Remove the rows for which the `transplant` value is 'Control'.
 How many fish are left?
 ```
+
+Expected:
 
 ```{r d2_remove_controls_and_count}
 t_1 <- t |> dplyr::filter(transplant != "Control") 
@@ -185,6 +195,8 @@ before the transplantation.
 What is the range of the values in this column?
 ```
 
+Expected:
+
 ```{r d2_get_pre_mass_range}
 expect_equal(lowest_pre_mass, min(t_1$pre_mass))
 expect_equal(highest_pre_mass, max(t_1$pre_mass))
@@ -202,6 +214,8 @@ where 0 means it died and 1 means that it survived.
 How many fish died? And how many survived?
 ```
 
+Expected:
+
 ```{r d2_count_n_dead_and_n_survived}
 expect_equal(n_survived, sum(t_1$survived == TRUE))
 expect_equal(n_died, sum(t_1$survived == FALSE))
@@ -218,6 +232,8 @@ The `enclosure` column denotes the ID of an enclosure.
 How many enclosures are in this dataset?
 ```
 
+Expected:
+
 ```{r d2_count_enclosures}
 expect_equal(n_enclosures, length(unique(t_1$enclosure)))
 ```
@@ -231,6 +247,8 @@ Ask the AI:
 ```
 How many fish are in each enclosure?
 ```
+
+Expected:
 
 ```{r d2_count_n_fish_per_enclosure}
 n_fish_per_enclosure <- dplyr::count(t_1, enclosure)
@@ -275,6 +293,8 @@ data called `cage_mass_mean` which holds the average
 Could you show me the data for enclosure L1?
 ```
 
+Expected:
+
 ```{r}
 cage_mass_mean_per_enclosure <- t_1 |> 
   dplyr::select(enclosure, pre_mass) |>
@@ -306,6 +326,8 @@ each fish is in.
 Could you show me the data for enclosure L1?
 ```
 
+Expected:
+
 ```{r}
 cage_mass_stdev_per_enclosure <- t_2 |> 
   dplyr::select(enclosure, pre_mass) |>
@@ -336,6 +358,8 @@ and its enclosure's `cage_mass_mean`,
 divided by the `cage_mass_stdev` of its enclosure.
 Could you show me the data for enclosure L1?
 ```
+
+Expected:
 
 ```{r}
 cage_mass_mean_deviation_sd_per_fish <- t_3 |> 
@@ -403,7 +427,7 @@ Create a scatter plot of this data:
   - Use dashed lines for categories 'LS' and 'SL'
 ```
 
-This should reproduce the plot in the paper:
+Expected is the plot in the paper:
 
 ```{r}
 t_4$origin_transplant <- paste0(
@@ -461,6 +485,8 @@ and its enclosure's `cage_mass_mean`,
 divided by the `cage_mass_stdev` of its enclosure.
 Could you show me the data for enclosure L1?
 ```
+
+Expected:
 
 ```{r}
 cage_mass_mean_deviation_sd_per_fish_rel <- t_4 |> 
@@ -525,7 +551,7 @@ Create a scatter plot of this data:
    - Use dashed lines for categories 'LS' and 'SL'
 ```
 
-This should reproduce a suggest plot:
+This should produce this plot:
 
 ```{r}
 ggplot2::ggplot(
@@ -597,8 +623,7 @@ Create a scatter plot of this data:
 ```
 
 The only change is to use a parabolic fit.
-
-This should reproduce a suggest plot:
+This should reproduce this plot:
 
 ```{r}
 ggplot2::ggplot(
