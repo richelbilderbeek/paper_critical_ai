@@ -2,9 +2,9 @@
 
 Authors ([undecided list](https://github.com/richelbilderbeek/paper_critical_ai/issues/4))
 
-- Richèl J.C. Bilderbeek [ORCID](https://orcid.org/0000-0003-1107-7049) ![ORCID](https://img.shields.io/badge/0000-0003-1107-7049-brightgreen.svg)
+- Richèl J.C. Bilderbeek [ORCID](https://orcid.org/0000-0003-1107-7049) [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--1107--7049-brightgreen)](https://orcid.org/0000-0003-1107-7049)
 - ?AR
-- Johanna Söderström [ORCID](https://orcid.org/0000-0003-3210-8609) ![ORCID](https://img.shields.io/badge/0000-0003-3210-8609-brightgreen.svg)
+- Johanna Söderström [ORCID](https://orcid.org/0000-0003-3210-8609) [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--3210--8609-brightgreen)](https://orcid.org/0000-0003-3210-8609)
 
 ## Abstract
 
