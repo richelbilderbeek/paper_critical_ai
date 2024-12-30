@@ -4,7 +4,7 @@
 #
 # Usage:
 #
-#   ./scripts/create_pdf_of_rmd_dialogue.R
+#   ./scripts/create_rendered_versions_of_rmd_dialogue.R
 
 path_from <- "docs/dialogue/dialogue.Rmd"
 

@@ -12,7 +12,7 @@ From that document, these two are created using a script:
     By running, in this repository's root folder, the command:
 
     ```bash
-    ./scripts/create_pdf_of_rmd_dialogue.R
+    ./scripts/create_rendered_versions_of_rmd_dialogue.R
     ```
 
 - [dialogue.md](dialogue.md): a rendered markdown document
