@@ -1,7 +1,10 @@
 # Can AI be used for academic critical thinking? A preregistered example
 
-- [Authors](https://github.com/richelbilderbeek/paper_critical_ai/issues/4):
-  RJCB, ?AR, JMS
+Authors ([undecided list](https://github.com/richelbilderbeek/paper_critical_ai/issues/4))
+
+- Richèl J.C. Bilderbeek [ORCID](https://orcid.org/0000-0003-1107-7049)
+- ?AR
+- Johanna Söderström [ORCID](https://orcid.org/0000-0003-3210-8609)
 
 ## Abstract
 
