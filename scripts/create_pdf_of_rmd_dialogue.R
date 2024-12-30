@@ -18,6 +18,11 @@ testthat::expect_true(file.exists(path_from))
 
 rmarkdown::render(
   path_from, 
+  "md_document"
+)
+
+rmarkdown::render(
+  path_from, 
   "pdf_document"
 )
 
