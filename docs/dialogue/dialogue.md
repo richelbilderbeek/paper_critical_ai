@@ -1118,14 +1118,10 @@ Expected is the plot in the paper:
         method = "glm",
         method.args = list(family = "binomial"),
         se = FALSE
-      ) 
+      )
     #> `geom_smooth()` using formula = 'y ~ x'
 
 ![](dialogue_files/figure-markdown_strict/unnamed-chunk-7-1.png)
-
-
-    # No idea how to get that P
-    # + ggpmisc::stat_poly_eq(ggpmisc::use_label("eq"))
 
 ## **Q1**: Ask if the conclusion is correct
 
@@ -1394,7 +1390,7 @@ Ask the AI:
          a `transplant` of 'Lake' are in category 'SL'
       - Fish that have an `origin` of 'Stream' and
          a `transplant` of 'Stream' are in category 'SS'
-    - Show a trendline for each binomal fit on each of these 4 categories.
+    - Show a trendline for each parabolic fit on each of these 4 categories.
        - Use blue lines for categories that originate from a lake
        - Use green lines for categories that originate from a stream
        - Use solid lines for categories 'LL' and 'SS'
@@ -1418,79 +1414,23 @@ This should produce this plot:
       ) +
       ggplot2::geom_point() +
       ggplot2::geom_smooth(
-        method = "glm",
-        method.args = list(family = "binomial"),
+        method = "lm", 
+        formula = y ~ x + I(x^2),
         se = FALSE
       )
-    #> `geom_smooth()` using formula = 'y ~ x'
 
 ![](dialogue_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
-The only difference is that this plot uses relative body masses. The
-fit, however, is unfair: the binomial distribution is [assumed to be
-monotonically
+The differences are: - this plot uses relative body masses, instead of
+absolute - the fit is parabolic, instead of binomial, as the latter is
+[assumed to be monotonically
 increasing/decreasing](https://github.com/richelbilderbeek/paper_critical_ai/issues/15).
 This means that a binomial distribution cannot be used to fit on data
 that is shaped like a `U` (as is assumed in the original paper: the
-extreme body masses have the highest fitness). Hence a different fit
-should be used.
+extreme body masses have the highest fitness)
 
 ## **Q2**: Ask if the conclusion is correct
 
 -   A conclusion drawn from the data is that the extreme body masses are
     likelier to survive. Would you agree that the data supports this
     claim?
-
-### D5.3 Plot relative standarized body mass with parabolic fit
-
-Ask the AI:
-
-    Create a scatter plot of this data:
-    - Each point is a fish. 
-    - Use a blue color for fish
-      that have 'Lake' as their origin.
-    - Use a green color for fish
-      that have 'Stream' as their origin.
-    - On the X axis, put the values of `cage_mass_mean_deviation_sd_rel`
-      of each fish
-    - On the Y axis, put the `survived` of each fish.
-    - Put the fish in four categories:
-      - Fish that have an `origin` of 'Lake' and
-         a `transplant` of 'Lake' are in category 'LL'
-      - Fish that have an `origin` of 'Lake' and
-         a `transplant` of 'Stream' are in category 'LS'
-      - Fish that have an `origin` of 'Stream' and
-         a `transplant` of 'Lake' are in category 'SL'
-      - Fish that have an `origin` of 'Stream' and
-         a `transplant` of 'Stream' are in category 'SS'
-    - Show a trendline for each parabolic fit on each of these 4 categories.
-       - Use blue lines for categories that originate from a lake
-       - Use green lines for categories that originate from a stream
-       - Use solid lines for categories 'LL' and 'SS'
-       - Use dashed lines for categories 'LS' and 'SL'
-
-The only change is to use a parabolic fit. This should reproduce this
-plot:
-
-    ggplot2::ggplot(
-      data = t_5,
-      ggplot2::aes(
-        x = cage_mass_mean_deviation_sd_rel,
-        y = survived,
-        color = origin_transplant,
-        lty = origin_transplant
-      )
-    ) + ggplot2::scale_color_manual(
-        values = c("blue", "blue", "green", "green")
-      ) + 
-      ggplot2::scale_linetype_manual(
-        values = c("solid", "dashed", "dashed", "solid")
-      ) +
-      ggplot2::geom_point() +
-      ggplot2::geom_smooth(
-        method = "lm", 
-        formula = y ~ x + I(x^2),
-        se = FALSE
-      )
-
-![](dialogue_files/figure-markdown_strict/unnamed-chunk-10-1.png)
