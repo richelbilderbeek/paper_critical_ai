@@ -22,4 +22,3 @@ From that document, these two are created using a script:
 
     The file with the data is [Bolnick_traits.txt](Bolnick_traits.txt)
 
-
