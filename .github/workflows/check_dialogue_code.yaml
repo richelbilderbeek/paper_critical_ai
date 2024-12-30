@@ -54,4 +54,4 @@ jobs:
         shell: Rscript {0}
 
       - name: Run
-        run: ./scripts/create_pdf_of_rmd_dialogue.R
+        run: ./scripts/create_rendered_versions_of_rmd_dialogue.R
