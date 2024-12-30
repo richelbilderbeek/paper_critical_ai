@@ -21,6 +21,9 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4
 
+      - name: Ignore rendered document
+        run: rm docs/dialogue/dialogue.md
+
       - uses: igsekor/pyspelling-any@v1.0.4
 
 
