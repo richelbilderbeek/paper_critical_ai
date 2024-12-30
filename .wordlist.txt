@@ -36,3 +36,6 @@ io
 osf
 yxv
 DOI
+Bilderbeek
+ORCID
+Söderström
