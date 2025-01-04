@@ -82,7 +82,23 @@ and tested below, during the dialogue.
 
 ## D1. Ask an AI to read the dataset
 
-### D1.1: read data
+### D1.1: describe research paper conclusiom
+
+Ask the AI:
+
+```
+I am going to upload data.
+
+The data consist of fish in cages and their survival.
+
+A paper that analysed this data concluded:
+'survival is higher for atypically sized individuals within cages'.
+
+How would you suggest to analyse the data?
+```
+
+
+### D1.2: read data
 
 - The dialogue starts by uploading the data for the paper
   at [here](https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017/blob/master/Bolnick_traits.txt).
@@ -92,7 +108,18 @@ and tested below, during the dialogue.
 t_all <- read.csv("Bolnick_traits.txt", sep = " ")
 ```
 
-### D1.2: show first rows
+### D1.3: first impression
+
+```
+I will now walk you through how the data should be understood.
+
+A paper that analysed this data concluded:
+'survival is higher for atypically sized individuals within cages'.
+
+Do you already think that this data suggests that?
+```
+
+### D1.4: show first rows
 
 Ask the AI:
 
