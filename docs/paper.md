@@ -35,13 +35,14 @@ AI can do critical thinking to some extent [reference].
 
 Humans sometimes discuss academic papers.
 During such an event, papers are examined critically.
-During a TRÊS literature club of ?2018,
+During a TRÊS literature club of around 2018,
 the paper `[Bolnick and Stutz, 2017]` was discussed.
-This paper has 71 citations (as of on Google Scholar on 2024-12-23)
-with an interesting conclusion. [what do the papers citing say, do they say it
-is flawed, or critique it in some way?] Upon closer inspection of the data,
-however, the conclusion was judged to be
-false.
+This paper's conclusion was novel and has accumulated 72 citations
+(as of on Google Scholar on 2025-04-18) of researches building upon this
+paper's conclusion.
+When the literature club looked closer at the data,
+however, the conclusion of the paper was, however, judged to be
+false by its participants.
 The discussion of this paper and its perceived flaw
 is discussed in the section 'The paper discussion'.
 
