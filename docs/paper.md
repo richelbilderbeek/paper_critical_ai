@@ -4,7 +4,8 @@ Authors ([undecided list](https://github.com/richelbilderbeek/paper_critical_ai/
 
 - Richèl J.C. Bilderbeek
   [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--1107--7049-brightgreen)](https://orcid.org/0000-0003-1107-7049)
-- ?AR
+- Apu Ramesh 
+  [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--7200--1366-brightgreen)](https://orcid.org/0000-0002-7200-1366)
 - Johanna Söderström
   [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--3210--8609-brightgreen)](https://orcid.org/0000-0003-3210-8609)
 
