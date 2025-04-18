@@ -59,8 +59,17 @@ experience, reflection, reasoning, or communication,
 as a guide to belief and action.'.
 
 Where the earlier definition is simple, we also follow the
-framework of `[Spector & Ma, 2019]`, 
-which gives 5 levels of critical thinking.
+framework of `[Spector & Ma, 2019]`.
+
+???- question "How does that framework look like?"
+
+    Here is figure 1 from `[Spector & Ma, 2019]`:
+
+    ![Spector & Na, 2019 figure 1](spector_and_ma_2019_fig_1.png)
+
+The framework provides for 5 levels of critical thinking,
+starting from novice as the lowest and expert
+as the highest level.
 
 ???- question "What are those 5 levels?"
 
@@ -68,7 +77,7 @@ which gives 5 levels of critical thinking.
     - Beginner
     - Professional
     - Proficent
-    - Expert.  
+    - Expert
 
 The higher levels of critical
 thinking are achieved from both an increase in knowledge
