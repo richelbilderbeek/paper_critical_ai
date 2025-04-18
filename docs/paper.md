@@ -59,11 +59,21 @@ experience, reflection, reasoning, or communication,
 as a guide to belief and action.'.
 
 Where the earlier definition is simple, we also follow the
-framework of `[Spector & Ma, 2019]` as a definition of critical thinking.
-Even though it avoids giving a definition of critical thinking,
-it does specify 5 levels of critical thinking (from novice to expert),
-which is achieved by going through 8 abilities, of which 3 can be found
-literally in Blooms taxonomy.
+framework of `[Spector & Ma, 2019]`, 
+which gives 5 levels of critical thinking.
+
+???- question "What are those 5 levels?"
+
+    - Novice
+    - Beginner
+    - Professional
+    - Proficent
+    - Expert.  
+
+The higher levels of critical
+thinking are achieved from both an increase in knowledge
+and increasingly high ability to reason. 
+Of these 8 abilities, 3 can be found literally in Blooms taxonomy.
 
 ???- question "What are those 8 abilities?"
 
@@ -76,18 +86,19 @@ literally in Blooms taxonomy.
     - Reflection
     - Judgement
 
+This framework can be used as a guide to take any learner, such an AI,
+to the highest level of critical thinking,
+as we'll do in the experiment of this paper.
 
 Additionally, `[Spector & Ma, 2019]` state that 
 'The process of critical thinking requires the support
 of corresponding internal indispositions such as open-mindedness and
 truth-seeking'.
 Seeking the truth is one of the goals of science
-`[ref, ?UNESCO]`. Would an AI be able to think critically, hence, it would
-be able to (help) seek the truth.
-
-### AI is can do some level of critical thinking
-
-AI can do critical thinking to some extent [reference].
+`[ref, ?UNESCO]`.
+Would an AI be able to think critically, hence, it would
+be able to (help) seek the truth, which is what we investigate
+in this paper.
 
 ### Humans do critical thinking when discussing academic papers
 
