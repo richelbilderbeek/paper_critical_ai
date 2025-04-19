@@ -137,23 +137,21 @@ is discussed in the section 'The paper discussion'.
 
 The goal of this paper is to measure the level of critical
 thinking of an AI in the context of an academic paper,
-in which we tell an AI about a paper and its conclusion,
-after which we let it reproduce the paper's results (we
-assume the AI will be able to reproduce the experiment's results
-and agree with the paper's conclusion,
-else the experiment has failed).
-[to me the order here is not super clear. why do we need to tell AI about
-paper to begin with? could we not let it look at the data, and reproduce
-results, and then see if it would go along with specific sections of
-conclusions/statements in the paper?]
-Then the dialogue is extended,
-where the AI is ask to reproduce a different
-plot, which would reject the original paper's conclusion.
-Will the AI be able to change its mind?
+following the framework of `[Spector & Ma, 2019]`.
+Assuming we can guide an AI to the highest level
+of critical thinking, we determine how well it achieves
+on the highest abilities (evaluation, synthesis, reflection and judgement)
+needed to achieve this level.
 
-## Lit review
-
-what is critical thinking?
+To do so, we guide an AI to the highest level of critical thinking
+on an academic paper, following the storyline of that paper.
+First, we teach an AI the analysis of the paper and ask it to judge
+if the analysis is sound. Will it be gullible or will it point out already
+the same flaws that humans found?
+Second, we teach the AI an alternative line of thought, to make
+it re-evaluate the same analysis.
+Will it be able to change its judgement from some indirect
+hints from humans?
 
 ## Hypothesis
 
