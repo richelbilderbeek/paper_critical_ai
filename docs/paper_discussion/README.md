@@ -46,7 +46,7 @@ only two fish were present. This will always result in
 normalized body masses of `-0.707` and `+0.707` (i.e. the square root of
 2 and its negative), regardless of the fish had very similar of
 very different body masses. The effect of this is left unexplored,
-as we think that using absolote values of body mass is the more
+as we think that using absolute values of body mass is the more
 influential flaw in the original paper.
 
 ## References

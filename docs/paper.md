@@ -16,17 +16,17 @@ Can it do the critical thinking as required by academia,
 especially re-evaluating and judging the
 validity of an experiment?
 Here we test this on a paper where such a re-evaluation
-and judgmement would help us judge its soundness
+and judgment would help us judge its soundness
 and conclusion.
 We do so by guiding an AI to an expert level
-of crititical thinking on that paper, in the process
+of critical thinking on that paper, in the process
 reproducing its results and judging its conclusion,
 assuming it will gullably agree on the conclusion of the academic paper.
 However, at that stage, we guide the AI through another line of thought,
 giving it the opportunity to re-evaluate and change its judgment
-on the soundsness of the conclusions in the original paper.
+on the soundness of the conclusions in the original paper.
 We find that ..., meaning that AI can/cannot be used as a
-virtual collague able to help judge the soundness of an academic paper.
+virtual colleague able to help judge the soundness of an academic paper.
 
 ## Introduction
 
@@ -43,9 +43,9 @@ It is mentioned commonly among
 There are many definitions of critical thinking.
 We use a definition that synergizes with the experiment presented in this
 paper.
-A common occurance in these definitions for critical thinking
+A common occurrence in these definitions for critical thinking
 is their inspiration from the stages of Bloom's taxonomy `[Bloom, 1956]`,
-which are used in pedogagy to help formulate a teaching outcome
+which are used in pedagogy to help formulate a teaching outcome
 of the appropriate
 level (e.g. `[Chandio et al., 2016; Rutkowski et al., 2010]`).
 
