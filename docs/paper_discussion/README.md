@@ -35,6 +35,20 @@ C      |![Figure 2, reproduced](fig2_reproduced_no_abs.png)|Reproduced using the
 
 <!-- markdownlint-enable MD013 -->
 
+Note that there is another flaw in the analysis,
+that is not mentioned in the original paper,
+which is the different amounts of fish in an enclosure.
+The original paper describes three fish per enclosure.
+In such a setting, it seems reasonable to normalize the body mass
+of the fish within each enclosure.
+However, in three enclosures (L6, L25, and S24),
+only two fish were present. This will always result in
+normalized body masses of `-0.707` and `+0.707` (i.e. the square root of
+2 and its negative), regardless of the fish had very similar of
+very different body masses. The effect of this is left unexplored,
+as we think that using absolote values of body mass is the more
+influential flaw in the original paper.
+
 ## References
 
 - `[Bolnick & Stutz, 2017]` Bolnick, Daniel I., and William E. Stutz.
