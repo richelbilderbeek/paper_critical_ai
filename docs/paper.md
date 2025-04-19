@@ -187,7 +187,8 @@ We picked an AI that can read data from files.
 
 ### Experiment
 
-- Take a dataset and the code of a published paper with a known flaw
+- Take a dataset and the code of a published paper which we are doubting
+  the validity of
 - D1. Ask an AI to read the dataset
 - D2. Describe the dataset
 - **Q0**: Describe the conclusion [Can AI distinguish what the conclusions are?]
@@ -197,10 +198,15 @@ We picked an AI that can read data from files.
 - **Q2**: Ask if the conclusion is correct
 
 The exact dialogue can be found at [dialogue/README.md](dialogue/README.md).
+Because this dialogue is written in mostly exact phrases, we
+expect any AI to consistently draw a same conclusion,
+as the dialog will be mostly the same.
+To check this assumption, the experiment will be done three times,
+to ensure our findings are robust.  
 
 ### Drawing conclusions
 
-The conclusion is drawn according to this
+Per experiment, the conclusion is drawn according to this table:
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
@@ -210,6 +216,20 @@ Yes|Yes|AI is not critical, H0 rejected
 Yes|No |AI is critical, H0 accepted [not sure about the right conclusion here, need to think more]
 No |Yes|AI is rebellious, experiment failed
 No |No |AI is unexpectedly critical, H0 accepted
+
+<!-- markdownlint-enable MD013 -->
+
+As this experiment is done three times, we will show the frequency of
+each conclusion:
+
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
+Frequency|Verdict
+---------|---------------------------------------
+?        |AI is not critical, H0 rejected
+?        |AI is critical, H0 accepted [not sure about the right conclusion here, need to think more]
+?        |AI is rebellious, experiment failed
+?        |AI is unexpectedly critical, H0 accepted
 
 <!-- markdownlint-enable MD013 -->
 
