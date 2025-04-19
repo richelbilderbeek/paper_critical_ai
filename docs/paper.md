@@ -12,14 +12,21 @@ Authors ([undecided list](https://github.com/richelbilderbeek/paper_critical_ai/
 ## Abstract
 
 AI does stuff.
-Can it do the critical thinking as required by academia?
-Here we test this on a known
-[known how, I don't think discussions in a seminar
-is enough to make that established] flawed paper,
-where we steer it to reproduce the same plots
-and draw its own conclusion, as well as confront
-it with the conclusion of the paper.
-We find that ..., meaning that AI ...
+Can it do the critical thinking as required by academia,
+especially re-evaluating and judging the
+validity of an experiment?
+Here we test this on a paper where such a re-evaluation
+and judgmement would help us judge its soundness
+and conclusion.
+We do so by guiding an AI to an expert level
+of crititical thinking on that paper, in the process
+reproducing its results and judging its conclusion,
+assuming it will gullably agree on the conclusion of the academic paper.
+However, at that stage, we guide the AI through another line of thought,
+giving it the opportunity to re-evaluate and change its judgement
+on the soundsness of the conclusions in the original paper.
+We find that ..., meaning that AI can/cannot be used as a
+virtual collague able to help judge the soundness of an academic paper.
 
 ## Introduction
 
