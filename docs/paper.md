@@ -246,13 +246,13 @@ We picked an AI that can read data from files.
 
 - Take a dataset and the code of a published paper which we are doubting
   the validity of
-- D1. Ask an AI to read the dataset
-- D2. Describe the dataset
-- **Q0**: Describe the conclusion [Can AI distinguish what the conclusions are?]
-- D4. Reproduce the results in that paper [multiple results?]
-- **Q1**: Ask if the conclusion is correct
-- D5 Reproduce the results that show a flaw in the reasoning
-- **Q2**: Ask if the conclusion is correct
+- D1. Teach an AI about the dataset in a published paper,
+  as well as the reasoning in that paper
+- D2. **Q1**: Let the AI judge if the conclusion in the paper is correct
+- D3. Teach the AI an alternative line of reasoning that would
+  invalidate the conclusion
+- D4. **Q2**: Let the AI judge if the conclusion in the paper is
+  still likely to be correct
 
 The exact dialogue can be found at [dialogue/README.md](dialogue/README.md).
 Because this dialogue is written in mostly exact phrases, we
