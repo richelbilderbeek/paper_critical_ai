@@ -175,7 +175,7 @@ t_all <- read.csv("Bolnick_traits.txt", sep = " ")
 
 Ask the AI:
 
-```
+```{verbatim}
 Could you show the first rows of the data?
 ```
 
@@ -189,7 +189,15 @@ We select only the relevant data here, so that the analysis can be checked
 by humans more easily:
 
 ```{r d1_make_data_human_readable}
-t <- t_all |> dplyr::select(fishID, origin, enclosure, pre_mass, transplant,  survived) |> dplyr::arrange(enclosure)
+t <- t_all |> 
+  dplyr::select(
+    fishID, 
+    origin, 
+    enclosure, 
+    pre_mass, 
+    transplant,  
+    survived
+  ) |> dplyr::arrange(enclosure)
 knitr::kable(head(t))
 ```
 
@@ -201,8 +209,8 @@ In these steps, we let the AI demonstrate it has read the data.
 
 Ask the AI:
 
-```
-The `fishID` column denotes the ID of a fish.
+```{verbatim}
+The 'fishID' column denotes the ID of a fish.
 Each fish has a unique ID.
 Could you give me the ID of the first fish in the dataset?
 ```
@@ -219,8 +227,8 @@ The expected answer is `r first_fish_id`.
 
 Ask the AI:
 
-```
-The `origin` column denotes the location where each fish comes from.
+```{verbatim}
+The 'origin' column denotes the location where each fish comes from.
 What is the location the first fish came from?
 ```
 
@@ -237,8 +245,8 @@ The correct answers is `r first_origin`.
 
 Ask the AI:
 
-```
-The `transplant` column denotes the location where each fish is
+```{verbatim}
+The 'transplant' column denotes the location where each fish is
 transplanted to.
 A value of 'Stream' denotes that the fish is part of the experiment
 and is translated to a stream.
@@ -261,7 +269,7 @@ The correct answers is `r first_transplant`.
 
 Ask the AI:
 
-```
+```{verbatim}
 The `pre_mass` column denotes the mass of a fish
 before the transplantation.
 A value of 'NA' denotes that the fish has not been weighted
@@ -274,7 +282,6 @@ If yes, what is its mass before transplantation?
 Expected:
 
 ```{r d1_2_4_get_first_pre_mass}
-
 expect_equal(t$pre_mass[1], first_pre_mass)
 ```
 
@@ -284,7 +291,7 @@ The correct answer is `r lowest_pre_mass` to `r highest_pre_mass`.
 
 Ask the AI:
 
-```
+```{verbatim}
 The `survived` column denotes if the fish survived the experiment.
 A value of 0 means that the fish died in the experiment.
 A value of 1 means that the fish survived the experiment.
@@ -303,7 +310,7 @@ The correct answers is `r first_fish_survived`.
 
 Ask the AI:
 
-```
+```{verbatim}
 The `enclosure` column denotes the ID of an enclosure.
 Each enclose has a unique ID.
 What is the ID of the first enclosure?
@@ -327,7 +334,7 @@ such as producing a tally.
 
 Ask the AI:
 
-```
+```{verbatim}
 How many different fish are in this dataset?
 ```
 
@@ -343,7 +350,7 @@ The expected answer is `r total_n_fish`.
 
 Ask the AI:
 
-```
+```{verbatim}
 What are the locations the fish come from?
 ```
 
@@ -359,7 +366,7 @@ The correct answers is `r origin_values`.
 
 Ask the AI:
 
-```
+```{verbatim}
 How many fish are part of the experiment?
 ```
 
@@ -376,7 +383,7 @@ The correct answer is `r n_fish_transplanted`.
 
 Ask the AI:
 
-```
+```{verbatim}
 What is lowest fish mass before transplantation?
 What is heighest fish mass before transplantation?
 ```
@@ -394,7 +401,7 @@ The correct answer is `r lowest_pre_mass` to `r highest_pre_mass`.
 
 Ask the AI:
 
-```
+```{verbatim}
 How many fish died?
 How many fish survived?
 How many fish were not part of the experiment?
@@ -418,14 +425,13 @@ The correct answers are:
 
 Ask the AI:
 
-```
+```{verbatim}
 How many enclosures are used in the experiment?
 ```
 
 Expected:
 
 ```{r d1_3_6_1_count_enclosures}
-
 expect_equal(n_enclosures, length(unique(t_1$enclosure)))
 ```
 
@@ -435,7 +441,7 @@ The correct answer is `r n_enclosures` enclosures.
 
 Ask the AI:
 
-```
+```{verbatim}
 How many fish, that are part of the experiment, are in each enclosure?
 ```
 
@@ -473,7 +479,7 @@ in the same way as the paper did.
 
 Ask the AI:
 
-```
+```{verbatim}
 To make a better comparison, we are going to standarize
 body masses per enclosure.
 Add a column to the
@@ -506,7 +512,7 @@ for each of the fish is `r cage_mass_mean_for_l1`.
 
 Ask the AI:
 
-```
+```{verbatim}
 To make a better comparison, we are going to standarize
 body masses per enclosure. Add a column to the
 data called `cage_mass_stdev` which is the standard
@@ -536,7 +542,7 @@ expect_equal(
 
 Ask the AI:
 
-```
+```{verbatim}
 To make a better comparison, we are going to standarize
 body masses per enclosure. Add a column to the
 data called `cage_mass_mean_deviation_sd`.
@@ -597,7 +603,7 @@ a figure in the paper.
 
 Ask the AI:
 
-```
+```{verbatim}
 Create a scatter plot of this data:
 - Each point is a fish. 
 - Use a blue color for fish
@@ -659,7 +665,7 @@ paper.
 
 Tell the AI:
 
-```
+```{verbatim}
 The data you've been working on was used in a scientific paper.
 The analyis you've done so far was used in the same scientific paper.
 Below this paragraph is the abstract of that scientific paper.
@@ -704,7 +710,7 @@ A trained AI does not need to reflect on its learning.
 
 Ask the AI:
 
-```
+```{verbatim}
 The scientific paper describes a conclusion drawn from the data.
 The conclusion is that the extreme body masses
 are likelier to survive.
@@ -719,7 +725,7 @@ Do you judge this to be a valid conclusion based on the data?
 
 Ask the AI:
 
-```
+```{verbatim}
 To make a better comparison, we are going to standarize
 body masses per enclosure. Add a column to the
 data called `cage_mass_mean_deviation_sd_rel`.
@@ -772,7 +778,7 @@ expect_equal(
 
 Ask the AI:
 
-```
+```{verbatim}
 Create a scatter plot of this data:
 - Each point is a fish. 
 - Use a blue color for fish
@@ -838,7 +844,7 @@ The differences are:
 In these steps, we are combining the current knowledge with the
 paper.
 
-```
+```{verbatim}
 We have just analysed the relative normalized body masses.
 Call this the alternative analysis.
 ```
@@ -851,7 +857,7 @@ Not applicable.
 
 Ask the AI:
 
-```
+```{verbatim}
 The scientific paper describes a conclusion drawn from the data.
 The conclusion is that the extreme body masses
 are likelier to survive.

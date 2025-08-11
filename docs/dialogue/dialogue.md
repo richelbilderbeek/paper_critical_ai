@@ -372,7 +372,15 @@ Expected:
 We select only the relevant data here, so that the analysis can be
 checked by humans more easily:
 
-    t <- t_all |> dplyr::select(fishID, origin, enclosure, pre_mass, transplant,  survived) |> dplyr::arrange(enclosure)
+    t <- t_all |> 
+      dplyr::select(
+        fishID, 
+        origin, 
+        enclosure, 
+        pre_mass, 
+        transplant,  
+        survived
+      ) |> dplyr::arrange(enclosure)
     knitr::kable(head(t))
 
 <table>
@@ -453,7 +461,7 @@ In these steps, we let the AI demonstrate it has read the data.
 
 Ask the AI:
 
-    The `fishID` column denotes the ID of a fish.
+    The 'fishID' column denotes the ID of a fish.
     Each fish has a unique ID.
     Could you give me the ID of the first fish in the dataset?
 
@@ -467,7 +475,7 @@ The expected answer is 181.
 
 Ask the AI:
 
-    The `origin` column denotes the location where each fish comes from.
+    The 'origin' column denotes the location where each fish comes from.
     What is the location the first fish came from?
 
 Expected:
@@ -480,7 +488,7 @@ The correct answers is Lake.
 
 Ask the AI:
 
-    The `transplant` column denotes the location where each fish is
+    The 'transplant' column denotes the location where each fish is
     transplanted to.
     A value of 'Stream' denotes that the fish is part of the experiment
     and is translated to a stream.
@@ -509,7 +517,6 @@ Ask the AI:
     If yes, what is its mass before transplantation? 
 
 Expected:
-
 
     expect_equal(t$pre_mass[1], first_pre_mass)
 
@@ -627,7 +634,6 @@ Ask the AI:
     How many enclosures are used in the experiment?
 
 Expected:
-
 
     expect_equal(n_enclosures, length(unique(t_1$enclosure)))
 
@@ -1350,7 +1356,7 @@ Expected is the plot in the paper:
       )
     #> `geom_smooth()` using formula = 'y ~ x'
 
-![](dialogue_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](dialogue_files/figure-markdown_strict/unnamed-chunk-26-1.png)
 
 ### D1.6: Synthesis
 
@@ -1699,7 +1705,7 @@ This should produce this plot:
         se = FALSE
       )
 
-![](dialogue_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](dialogue_files/figure-markdown_strict/unnamed-chunk-32-1.png)
 
 The differences are:
 
