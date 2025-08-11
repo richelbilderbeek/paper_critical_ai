@@ -193,8 +193,9 @@ In these steps, we let the AI read the data.
 
 #### D1.1.1: Read data
 
--   The dialogue starts by uploading the data for the paper at
-    [here](https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017/blob/master/Bolnick_traits.txt).
+-   The dialogue starts by uploading the data for the paper at [the
+    notes from the literature
+    club](https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017/blob/main/Bolnick_traits.txt).
 
 <!-- -->
 
