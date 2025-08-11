@@ -1,22 +1,116 @@
+## Goal
+
 In this document, the dialogue with the AI is described, including all
 control questions. Of each question, the expected answer is calculated.
 
-    library(testthat)
+## Overview
+
+The dialogue follows the skill levels of `[Spector & Ma, 2019]` in
+increasing order:
+
+<table>
+<thead>
+<tr class="header">
+<th>Chapter</th>
+<th>Ability</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D1.1</td>
+<td>Interpretation</td>
+<td>Read the data</td>
+</tr>
+<tr class="even">
+<td>D1.2</td>
+<td>Explanation</td>
+<td>Reproduce the data</td>
+</tr>
+<tr class="odd">
+<td>D1.3</td>
+<td>Reasoning</td>
+<td>Reason about the data</td>
+</tr>
+<tr class="even">
+<td>D1.4</td>
+<td>Analysis</td>
+<td>Work with the data</td>
+</tr>
+<tr class="odd">
+<td>D1.5</td>
+<td>Evaluation</td>
+<td>Double-check progress</td>
+</tr>
+<tr class="even">
+<td>D1.6</td>
+<td>Synthesis</td>
+<td>Combine data with research paper</td>
+</tr>
+<tr class="odd">
+<td>D1.7</td>
+<td>Reflection</td>
+<td>Not applicable</td>
+</tr>
+<tr class="even">
+<td>D2</td>
+<td>Judgement</td>
+<td>Ask Q1</td>
+</tr>
+<tr class="odd">
+<td>D3.1</td>
+<td>Analysis</td>
+<td>Work with data</td>
+</tr>
+<tr class="even">
+<td>D3.2</td>
+<td>Evaluation</td>
+<td>Double-check progress</td>
+</tr>
+<tr class="odd">
+<td>D3.3</td>
+<td>Synthesis</td>
+<td>Combine data with alternative line of reasoning</td>
+</tr>
+<tr class="even">
+<td>D3.4</td>
+<td>Reflection</td>
+<td>Not applicable</td>
+</tr>
+<tr class="odd">
+<td>D4</td>
+<td>Judgement</td>
+<td>Ask Q2</td>
+</tr>
+</tbody>
+</table>
 
 ## Expectations
 
-A paper does not typically hold code (like an R markdown document).
-Hence, in the end, all the constants are copy-pasted into a paper and
-then left unchecked.
+A paper does not typically hold code (unlike an R Markdown document as
+this one) and commonly all the results of an analysis are copy-pasted
+into a paper and then left unchecked.
 
 To make it easy to compare the final paper with the constants we’ve
 copy-pasted, here are all the constants:
 
+    ## Explain
+    first_fish_id <- 181
+    first_origin <- "Lake"
+    first_transplant <- "Lake"
+    first_pre_mass <- 1.00
+    first_fish_survived <- 0
+    first_enclosure_id <- "L1"
+
+    ## Reasoning
+    origin_values <- c("Lake", "Stream")
+    transplanted_values <- c("Lake", "Stream", "Control")
+    n_all_survived <- 151
+    n_all_died <- 89
+    n_all_ignored <- 60
     total_n_fish <- 300
     n_fish_control <- 60
     n_fish_transplanted <- 240
-    origin_values <- c("Lake", "Stream")
-    transplanted_values <- c("Lake", "Stream", "Control")
     lowest_pre_mass <- 0.5
     highest_pre_mass <- 3.6
     n_survived <- 151
@@ -25,14 +119,23 @@ copy-pasted, here are all the constants:
     n_enclosures_with_2_fish <- 3
     n_enclosures_with_3_fish <- 74
     n_enclosures_with_4_fish <- 3
-    anomous_enclosures <- c("L20", "L25", "L6", "L7", "S22", "S24")
+    anomalous_enclosures <- c("L20", "L25", "L6", "L7", "S22", "S24")
     cage_mass_mean_for_l1 <- 1.256667
     cage_mass_stdev_for_l1 <- 0.4532475
     cage_mass_mean_deviation_sd_for_l1 <- c(1.1546303, -0.5662836, -0.5883466)
 
     abs_cage_mass_mean_deviation_sd_for_l1 <- abs(cage_mass_mean_deviation_sd_for_l1)
 
+Here we check if our expectations are logically valid:
+
+    library(testthat)
+
     # Check consistency between these variables
+    expect_equal(
+      total_n_fish,
+      n_all_survived + n_all_died + n_all_ignored
+    )
+
     expect_equal(
       total_n_fish,
       n_fish_control + n_fish_transplanted
@@ -46,29 +149,49 @@ copy-pasted, here are all the constants:
       n_enclosures_with_2_fish + n_enclosures_with_3_fish + n_enclosures_with_4_fish
     )
     expect_equal(
-      length(anomous_enclosures),
+      length(anomalous_enclosures),
       n_enclosures_with_2_fish + n_enclosures_with_4_fish
     )
 
 All solutions to the dialog are written here, and tested below, during
 the dialogue.
 
-## D1. Ask an AI to read the dataset
+To test this, the file with the data needs to be present in the working
+folder:
 
-### D1.1: describe research paper conclusiom
+    dataset_filename <- "Bolnick_traits.txt"
+    if (!file.exists(dataset_filename)) {
+      stop(
+        "Dataset not found at path '", dataset_filename, "' \n",
+        "Current working directory: ", getwd(), " \n"
+      )
+    }
 
-Ask the AI:
+## Helper functions
 
-    I am going to upload data.
+Here are some functions we need in the analysis:
 
-    The data consist of fish in cages and their survival.
+    #' Determines if a value is TRUE. Is FALSE for NA
+    is_true <- function(x) { !is.na(x) & x == TRUE  }
+    expect_true(is_true(TRUE))
+    expect_false(is_true(FALSE))
+    expect_false(is_true(NA))
 
-    A paper that analysed this data concluded:
-    'survival is higher for atypically sized individuals within cages'.
+    #' Determines if a value is FALSE. Is FALSE for NA
+    is_false <- function(x) { !is.na(x) & x == FALSE}
+    expect_true(is_false(FALSE))
+    expect_false(is_false(TRUE))
+    expect_false(is_false(NA))
 
-    How would you suggest to analyse the data?
+## D1. Teach an AI about the data and line of reasoning in the paper
 
-### D1.2: read data
+These subsections are numbered by the abilities taught to the AI
+
+### D1.1: Interpretation
+
+In these steps, we let the AI read the data.
+
+#### D1.1.1: Read data
 
 -   The dialogue starts by uploading the data for the paper at
     [here](https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017/blob/master/Bolnick_traits.txt).
@@ -77,16 +200,7 @@ Ask the AI:
 
     t_all <- read.csv("Bolnick_traits.txt", sep = " ")
 
-### D1.3: first impression
-
-    I will now walk you through how the data should be understood.
-
-    A paper that analysed this data concluded:
-    'survival is higher for atypically sized individuals within cages'.
-
-    Do you already think that this data suggests that?
-
-### D1.4: show first rows
+#### D1.1.2: Show first rows
 
 Ask the AI:
 
@@ -331,13 +445,115 @@ checked by humans more easily:
 </tbody>
 </table>
 
-## D2. Describe the dataset
+### D1.2: Explanation
 
-### D2.1: count fish
+In these steps, we let the AI demonstrate it has read the data.
+
+#### D1.2.1: Explain ‘fishID’
 
 Ask the AI:
 
-    The `fishID` column denotes the ID of a fish. How many fish are in this dataset?
+    The `fishID` column denotes the ID of a fish.
+    Each fish has a unique ID.
+    Could you give me the ID of the first fish in the dataset?
+
+Expected:
+
+    expect_equal(t$fishID[1], first_fish_id)
+
+The expected answer is 181.
+
+#### D1.2.2: Explain ‘origin’
+
+Ask the AI:
+
+    The `origin` column denotes the location where each fish comes from.
+    What is the location the first fish came from?
+
+Expected:
+
+    expect_equal(first_origin, t$origin[1])
+
+The correct answers is Lake.
+
+#### D1.2.3: Explain ‘transplant’ values
+
+Ask the AI:
+
+    The `transplant` column denotes the location where each fish is
+    transplanted to.
+    A value of 'Stream' denotes that the fish is part of the experiment
+    and is translated to a stream.
+    A value of 'Lake' denotes that the fish is part of the experiment
+    and is translated to a lake.
+    A value of 'Control' denotes that this fish was not part of the experiment
+    and was part of the control group instead.
+    What is the locations the first fish is transplanted to?
+
+Expected:
+
+    expect_equal(t$transplant[1], first_transplant)
+
+The correct answers is Lake.
+
+#### D1.2.4: Explain ‘pre\_mass’
+
+Ask the AI:
+
+    The `pre_mass` column denotes the mass of a fish
+    before the transplantation.
+    A value of 'NA' denotes that the fish has not been weighted
+    before transplantation.
+
+    About the first fish: has it been weighted before transplantation?
+    If yes, what is its mass before transplantation? 
+
+Expected:
+
+
+    expect_equal(t$pre_mass[1], first_pre_mass)
+
+The correct answer is 0.5 to 3.6.
+
+#### D1.2.5: Explain ‘survived’
+
+Ask the AI:
+
+    The `survived` column denotes if the fish survived the experiment.
+    A value of 0 means that the fish died in the experiment.
+    A value of 1 means that the fish survived the experiment.
+    A value of NA means that the fish was irrevant to the experiment.
+
+Expected:
+
+    expect_equal(t$survived[1], first_fish_survived)
+
+The correct answers is 0.
+
+#### D1.2.6: Explain ‘enclosure’
+
+Ask the AI:
+
+    The `enclosure` column denotes the ID of an enclosure.
+    Each enclose has a unique ID.
+    What is the ID of the first enclosure?
+
+Expected:
+
+    expect_equal(t$enclosure[1], first_enclosure_id)
+
+The correct answer is L1.
+
+### D1.3: Reasoning
+
+In these steps, we let the AI reason about the data, such as producing a
+tally.
+
+#### D1.3.1: Reason about the ‘fishID’ values
+
+Ask the AI:
+
+    How many different fish are in this dataset?
 
 Expected:
 
@@ -345,11 +561,10 @@ Expected:
 
 The expected answer is 300.
 
-### D2.2: get the ‘origin’ values
+#### D1.3.2: Reason about the ‘origin’ values
 
 Ask the AI:
 
-    The `origin` column denotes the location where each fish comes from.
     What are the locations the fish come from?
 
 Expected:
@@ -358,26 +573,11 @@ Expected:
 
 The correct answers is Lake, Stream.
 
-### D2.3: get the ‘transplant’ values
+#### D1.3.3: Reason about ‘transplant’: count the fish in experiment
 
 Ask the AI:
 
-    The `transplant` column denotes the location where each fish is
-    transplanted to.
-    What are the locations the fish are transplanted to?
-
-Expected:
-
-    expect_equal(unique(t$transplant), transplanted_values)
-
-The correct answers is Lake, Stream, Control.
-
-### D2.4: remove the controls and count the fish
-
-Ask the AI:
-
-    Remove the rows for which the `transplant` value is 'Control'.
-    How many fish are left?
+    How many fish are part of the experiment?
 
 Expected:
 
@@ -386,13 +586,12 @@ Expected:
 
 The correct answer is 240.
 
-### D2.5: get the range of ‘pre\_mass’
+#### D1.3.4: Reason about the ‘pre\_mass’ values
 
 Ask the AI:
 
-    The `pre_mass` column denotes the mass of a fish
-    before the transplantation.
-    What is the range of the values in this column?
+    What is lowest fish mass before transplantation?
+    What is heighest fish mass before transplantation?
 
 Expected:
 
@@ -401,42 +600,48 @@ Expected:
 
 The correct answer is 0.5 to 3.6.
 
-### D2.6: count the number of dead fish and fish that survived
+#### D1.3.5: Reason with ‘survived’: count the survivors
 
 Ask the AI:
 
-    The `survived` column denotes if the fish survived the experiment,
-    where 0 means it died and 1 means that it survived.
-    How many fish died? And how many survived?
+    How many fish died?
+    How many fish survived?
+    How many fish were not part of the experiment?
 
 Expected:
 
-    expect_equal(n_survived, sum(t_1$survived == TRUE))
-    expect_equal(n_died, sum(t_1$survived == FALSE))
+    expect_equal(n_all_survived, sum(is_true(t$survived)))
+    expect_equal(n_all_died, sum(is_false(t$survived)))
+    expect_equal(n_all_ignored, sum(is.na(t$survived)))
 
-The correct answers are 89 died and 151 survived.
+The correct answers are:
 
-### D2.7: count the number of enclosures
+-   89 fish died
+-   151 fish survived
+-   60 fish were not part of the experiment?
+
+#### D1.3.6.1: Reason about the ‘enclosure’ values: count the nub
 
 Ask the AI:
 
-    The `enclosure` column denotes the ID of an enclosure.
-    How many enclosures are in this dataset?
+    How many enclosures are used in the experiment?
 
 Expected:
+
 
     expect_equal(n_enclosures, length(unique(t_1$enclosure)))
 
 The correct answer is 80 enclosures.
 
-### D2.8: count the number of fish in each enclosure
+#### D1.3.6.2: Reasom about ‘enclosure’: tally the number of fish
 
 Ask the AI:
 
-    How many fish are in each enclosure?
+    How many fish, that are part of the experiment, are in each enclosure?
 
 Expected:
 
+    t_1 <- t |> dplyr::filter(transplant != "Control") 
     n_fish_per_enclosure <- dplyr::count(t_1, enclosure)
     expect_equal(n_enclosures_with_2_fish, sum(n_fish_per_enclosure$n == 2))
     expect_equal(n_enclosures_with_3_fish, sum(n_fish_per_enclosure$n == 3))
@@ -486,7 +691,7 @@ The correct answer is:
 
 As a note to self, these are the anomalies:
 
-    expect_equal(anomous_enclosures, n_fish_per_enclosure[n_fish_per_enclosure$n != 3, ]$enclosure)
+    expect_equal(anomalous_enclosures, n_fish_per_enclosure[n_fish_per_enclosure$n != 3, ]$enclosure)
     knitr::kable(n_fish_per_enclosure[n_fish_per_enclosure$n != 3, ])
 
 <table>
@@ -531,15 +736,11 @@ As a note to self, these are the anomalies:
 </tbody>
 </table>
 
-## **Q0**. Describe the conclusion
+### D1.4: Analysis
 
--   A conclusion drawn from the data is that the extreme body masses are
-    likelier to survive. Would you agree that the data supports this
-    claim?
+In these steps, we work with the data, in the same way as the paper did.
 
-## D4. Reproduce the results in that paper
-
-### D4.1: calculate ‘cage\_mass\_mean’
+#### D1.4.1: calculate ‘cage\_mass\_mean’
 
 Ask the AI:
 
@@ -701,7 +902,7 @@ Expected:
 For enclose L1, the expected `cage_mass_mean` for each of the fish is
 1.256667.
 
-### D4.2: calculate ‘cage\_mass\_stdev’
+#### D1.4.2: calculate ‘cage\_mass\_stdev’
 
 Ask the AI:
 
@@ -873,7 +1074,7 @@ Expected:
       tolerance = 1.0e-6
     )
 
-### D4.3: calculate ‘cage\_mass\_mean\_deviation\_sd’
+#### D1.4.3: calculate ‘cage\_mass\_mean\_deviation\_sd’
 
 Ask the AI:
 
@@ -1087,7 +1288,13 @@ Expected:
 The values of `cage_mass_mean_deviation_sd` for enclosure `L1` are
 expected to be 1.1546303, 0.5662836, 0.5883466.
 
-### D4.4: reproduce the plot
+### D1.5: Evaluation
+
+The AI has been evaluated each step along the way. Regardless of this,
+here we evaluate the learning of the AI again, in a more visual way: it
+should reproduce a figure in the paper.
+
+#### D1.5.1: reproduce the plot
 
 Ask the AI:
 
@@ -1143,17 +1350,66 @@ Expected is the plot in the paper:
       )
     #> `geom_smooth()` using formula = 'y ~ x'
 
-![](dialogue_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](dialogue_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
-## **Q1**: Ask if the conclusion is correct
+### D1.6: Synthesis
 
--   A conclusion drawn from the data is that the extreme body masses are
-    likelier to survive. Would you agree that the data supports this
-    claim?
+In these steps, we are combining the current knowledge with the paper.
 
-## D5 Reproduce the results that show a flaw in the reasoning
+Tell the AI:
 
-### D5.1 Add relative standarized body mass
+    The data you've been working on was used in a scientific paper.
+    The analyis you've done so far was used in the same scientific paper.
+    Below this paragraph is the abstract of that scientific paper.
+    Read it.
+
+    Two distinct forms of natural selection promote adaptive biological
+    diversity. Divergent selection occurs when different environments
+    favour different phenotypes, leading to increased differences
+    between populations. Negative frequency-dependent selection
+    occurs when rare variants within a population are favoured over
+    common ones, increasing diversity within populations. These
+    two diversifying forces promote genetic variation at different
+    spatial scales, and may act in opposition, but their relative effects
+    remain unclear because they are rarely measured concurrently.
+    Here we show that negative frequency-dependent selection within
+    populations can favor rare immigrants over locally adapted
+    residents. We reciprocally transplanted lake and stream ecotypes
+    of threespine stickleback into lake and stream habitats, while
+    manipulating the relative abundance of residents versus immigrants.
+    We found negative frequency-dependence: survival was highest
+    for the locally rare ecotype, rather than natives. Also, individuals
+    with locally rare major histocompatibility complex (MHC) class
+    IIb genotypes were infected by fewer parasites. This negative
+    frequency-dependent selection will tend to favour rare immigrants
+    over common residents, amplifying the effect of migration and
+    undermining the efficacy of divergent natural selection to drive
+    population differences. The only signal of divergent selection
+    was a tendency for foreign fish to have higher parasite loads than
+    residents, after controlling for MHC genotype rarity. Frequency-
+    dependent ecological interactions have long been thought to
+    promote speciation. Our results suggest a more nuanced view in
+    which negative frequency dependence alters the fate of migrants to
+    promote or constrain evolutionary divergence between populations.
+
+### D1.7: Reflection
+
+Not applicable. A trained AI does not need to reflect on its learning.
+
+## D2. **Q1**: Ask if the conclusion is correct
+
+Ask the AI:
+
+    The scientific paper describes a conclusion drawn from the data.
+    The conclusion is that the extreme body masses
+    are likelier to survive.
+    Do you judge this to be a valid conclusion based on the data?
+
+## D3 Alternative line of reasoning
+
+### D3.1 Analysis
+
+#### D3.1.1 Add relative standarized body mass
 
 Ask the AI:
 
@@ -1390,7 +1646,9 @@ Expected:
       tolerance = 1.0e-6
     )
 
-### D5.2 Plot relative standarized body mass with same fit
+### D3.2 Evaluation
+
+### D3.2.1 Plot relative standarized body mass with same fit
 
 Ask the AI:
 
@@ -1441,18 +1699,36 @@ This should produce this plot:
         se = FALSE
       )
 
-![](dialogue_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](dialogue_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
-The differences are: - this plot uses relative body masses, instead of
-absolute - the fit is parabolic, instead of binomial, as the latter is
-[assumed to be monotonically
-increasing/decreasing](https://github.com/richelbilderbeek/paper_critical_ai/issues/15).
-This means that a binomial distribution cannot be used to fit on data
-that is shaped like a `U` (as is assumed in the original paper: the
-extreme body masses have the highest fitness)
+The differences are:
 
-## **Q2**: Ask if the conclusion is correct
+-   this plot uses relative body masses, instead of absolute
+-   the fit is parabolic, instead of binomial, as the latter is [assumed
+    to be monotonically
+    increasing/decreasing](https://github.com/richelbilderbeek/paper_critical_ai/issues/15).
+    This means that a binomial distribution cannot be used to fit on
+    data that is shaped like a `U` (as is assumed in the original paper:
+    the extreme body masses have the highest fitness)
 
--   A conclusion drawn from the data is that the extreme body masses are
-    likelier to survive. Would you agree that the data supports this
-    claim?
+### D3.3 Synthesis
+
+In these steps, we are combining the current knowledge with the paper.
+
+    We have just analysed the relative normalized body masses.
+    Call this the alternative analysis.
+
+### D3.4 Reflection
+
+Not applicable.
+
+## D4. **Q2**: Ask if the conclusion is correct
+
+Ask the AI:
+
+    The scientific paper describes a conclusion drawn from the data.
+    The conclusion is that the extreme body masses
+    are likelier to survive.
+    Do you judge this to be a valid conclusion based on the data?
+
+    Take into account the insights from the alternative analysis.
