@@ -112,7 +112,7 @@ as the highest level.
     - Proficent
     - Expert
 
-The framework encompasses 4 dimensions. 
+The framework encompasses 4 dimensions.
 
 ???- question "What are the 4 dimensions?"
 
@@ -120,7 +120,7 @@ The framework encompasses 4 dimensions.
     - Dispositions: the psychological perspective, such as motivation
     - Levels: the epistemological perspective,
       understanding how to knowledge is gained
-      <!-- 
+      <!--
       RJCB: 'understanding how to knowledge is gained' is my interpretation.
       I think the paper is vague about it.
       Please check and correct me.
@@ -218,7 +218,7 @@ hints from humans?
 
     As remarked by JMS, H1 'AI cannot be used for critical thinking'
     is missing. I (RJCB) think that adding H1 would be redundant.
-    
+
     I would agree that, when there are more hypotheses,
     to start numbering hypotheses from one, e.g. H1 and onwards
     (i.e. don't start counting from zero)
