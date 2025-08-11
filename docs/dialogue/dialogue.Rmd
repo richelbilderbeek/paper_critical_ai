@@ -25,6 +25,18 @@ calculated.
 library(testthat)
 ```
 
+The dialogue follows the skill levels of `[Spector & Ma, 2019]`
+in increasing order:
+
+- Interpretation
+- Explanation
+- Reasoning
+- Analysis
+- Evaluation
+- Synthesis
+- Reflection
+- Judgement
+
 ## Expectations
 
 A paper does not typically hold code (like an R markdown

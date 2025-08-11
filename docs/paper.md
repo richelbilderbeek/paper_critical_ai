@@ -34,11 +34,28 @@ virtual colleague able to help judge the soundness of an academic paper.
 
 AI does stuff [reference].
 
+<!-- We are using general AI in this paper,
+which is an artificial human-like intelligence.
+Add a reference to a paper that defines this -->
+
 ### Critical thinking is important
 
-Critical thinking is important.
-It is mentioned commonly among
-[21st century skills](https://en.wikipedia.org/wiki/21st_century_skills).
+
+To succeed in the 21st century, a human needs
+21st century skills.
+Critical thinking is one for the four most important 21st century
+skills `[Spector & Ma, 2019]`.
+
+???- question "What are those 21st century skills?"
+
+    These are:
+
+    - Collaboration
+    - Communication
+    - Creativity
+    - Critical thinking
+
+    These are also called 'the 4 C's' `[Spector & Ma, 2019]`
 
 There are many definitions of critical thinking.
 We use a definition that synergizes with the experiment presented in this
@@ -95,9 +112,39 @@ as the highest level.
     - Proficent
     - Expert
 
-The higher levels of critical
-thinking are achieved from both an increase in knowledge
-and increasingly high ability to reason.
+The framework encompasses 4 dimensions. 
+
+???- question "What are the 4 dimensions?"
+
+    - Abilities: the educational perspective, from interpretation to judgement
+    - Dispositions: the psychological perspective, such as motivation
+    - Levels: the epistemological perspective,
+      understanding how to knowledge is gained
+      <!-- 
+      RJCB: 'understanding how to knowledge is gained' is my interpretation.
+      I think the paper is vague about it.
+      Please check and correct me.
+      -->
+    - Time: learning takes time
+
+These four dimensions are:
+
+- (1) Ability, i.e. the observable skill to do with
+  knowledge, such as correctly interpreting data or reason about it
+- (2) Dispositions, i.e. psychological processes involved
+  in learning, such as motivation.
+  We assume this dimension to
+  be irrelevant for an AI.
+- (3) Level of epistemological cunning, i.e. the ability to know what
+  knowledge is.
+  We assume this dimension to
+  be inseparably intertwined with the observable 'Ability' dimension
+  in an AI.
+- (4) Time, i.e. humans do not learn instantaneous. A trained AI,
+  such as used in this experiment has had its time to learn.
+
+The only relevant
+dimension for this paper is 'Ability'.
 Of these 8 abilities, 3 can be found literally in Blooms taxonomy.
 
 ???- question "What are those 8 abilities?"
@@ -120,7 +167,10 @@ Additionally, `[Spector & Ma, 2019]` state that
 of corresponding internal indispositions such as open-mindedness and
 truth-seeking'.
 Seeking the truth is one of the goals of science
-`[ref, ?UNESCO]`.
+<!--
+RJCB: 'Seeking the truth is one of the goals of science'
+needs a reference, maybe UNESCO?
+-->
 Would an AI be able to think critically, hence, it would
 be able to (help) seek the truth, which is what we investigate
 in this paper.
@@ -209,7 +259,7 @@ Because this dialogue is written in mostly exact phrases, we
 expect any AI to consistently draw a same conclusion,
 as the dialog will be mostly the same.
 To check this assumption, the experiment will be done three times,
-to ensure our findings are robust.  
+to ensure our findings are robust.
 
 ### Drawing conclusions
 
