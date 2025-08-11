@@ -320,6 +320,11 @@ at different points in time.
 
 ## References
 
+- `[Bilderbeek, 2017]`
+  Bilderbeek, R.J.C.
+  Literature Club notes.
+  [https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017](https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017)
+
 - `[Bloom, 1956]`
   Bloom, Benjamin S., et al.
   Taxonomy of educational objectives:
@@ -327,7 +332,11 @@ at different points in time.
   Handbook 1: Cognitive domain. New York: Longman, 1956.
 
 - `[Bolnick and Stutz, 2017]`
-  [https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017](https://github.com/richelbilderbeek/Bolnick_and_Stutz_2017)
+  Bolnick, D., Stutz, W.
+  Frequency dependence limits divergent evolution by
+  favouring rare immigrants over residents.
+  Nature 546, 285–288 (2017).
+  [https://doi.org/10.1038/nature22351](https://doi.org/10.1038/nature22351)
 
 - `[Chandio et al., 2016]`
   Chandio, Muhammad Tufail, Saima Murtaza Pandhiani, and Rabia Iqbal.

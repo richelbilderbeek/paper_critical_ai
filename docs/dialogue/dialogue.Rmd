@@ -16,48 +16,39 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Goal
+
 In this document, the dialogue with the AI
 is described, including all control questions.
 Of each question, the expected answer is
 calculated.
 
-The data needs to be present in the working folder:
-
-```{r}
-dataset_filename <- "Bolnick_traits.txt"
-if (!file.exists(dataset_filename)) {
-  stop(
-    "Dataset not found at path '", dataset_filename, "' \n",
-    "Current working directory: ", getwd(), " \n"
-  )
-}
-```
+## Overview
 
 The dialogue follows the skill levels of `[Spector & Ma, 2019]`
 in increasing order:
 
-- Interpretation
-- Explanation
-- Reasoning
-- Analysis
-- Evaluation
-- Synthesis
-- Reflection
-- Judgement
-
-The dialogue will have these parts parts:
-
-- `D1`. Prepare for Q1, by going through the skill levels and
-  following the reasoning of the paper
-- `D2`. Ask Q1
-- `D3.` Prepare for Q2, by supplying another line of reasoning
-- `D4`. Ask Q2
+Chapter|Ability       |Description
+-------|--------------|-------------------------------
+D1.1   |Interpretation|Read the data
+D1.2   |Explanation   |Reproduce the data
+D1.3   |Reasoning     |Reason about the data
+D1.4   |Analysis      |Work with the data
+D1.5   |Evaluation    |Double-check progress
+D1.6   |Synthesis     |Combine data with research paper
+D1.7   |Reflection    |Not applicable
+D2     |Judgement     |Ask Q1
+D3.1   |Analysis      |Work with data
+D3.2   |Evaluation    |Double-check progress
+D3.3   |Synthesis     |Combine data with alternative line of reasoning
+D3.4   |Reflection    |Not applicable
+D4     |Judgement     |Ask Q2
 
 ## Expectations
 
-A paper does not typically hold code (like an R markdown
-document). Hence, in the end,
-all the constants are copy-pasted into a paper
+A paper does not typically hold code (unlike an R Markdown
+document as this one)
+and commonly all the results of an analysis are copy-pasted into a paper
 and then left unchecked.
 
 To make it easy to compare the final paper with
@@ -130,6 +121,20 @@ expect_equal(
 All solutions to the dialog are written here,
 and tested below, during the dialogue.
 
+To test this, the file with the data needs to be present
+in the working folder:
+
+```{r}
+dataset_filename <- "Bolnick_traits.txt"
+if (!file.exists(dataset_filename)) {
+  stop(
+    "Dataset not found at path '", dataset_filename, "' \n",
+    "Current working directory: ", getwd(), " \n"
+  )
+}
+```
+
+
 ## Helper functions
 
 Here are some functions we need in the analysis:
@@ -150,20 +155,7 @@ expect_false(is_false(NA))
 
 ## D1. Teach an AI about the data and line of reasoning in the paper
 
-These subsections are numbered by the abilities taugh to the AI
-
-Subsection|Description
-----------|--------------
-`D1.1`    |Interpretation
-`D1.2`    |Explanation
-`D1.3`    |Reasoning
-`D1.4`    |Analysis
-`D1.5`    |Evaluation
-`D1.6`    |Synthesis
-`D1.7`    |Reflection
-`D1.8`    |Judgement
-
-
+These subsections are numbered by the abilities taught to the AI
 
 ### D1.1: Interpretation
 
@@ -474,10 +466,10 @@ knitr::kable(n_fish_per_enclosure[n_fish_per_enclosure$n != 3, ])
 
 ### D1.4: Analysis
 
+In these steps, we work with the data,
+in the same way as the paper did.
 
-
-
-#### D1.4.10: calculate 'cage_mass_mean'
+#### D1.4.1: calculate 'cage_mass_mean'
 
 Ask the AI:
 
@@ -510,7 +502,7 @@ expect_equal(
 For enclose L1, the expected  `cage_mass_mean` 
 for each of the fish is `r cage_mass_mean_for_l1`.
 
-#### D1.4.11: calculate 'cage_mass_stdev'
+#### D1.4.2: calculate 'cage_mass_stdev'
 
 Ask the AI:
 
@@ -540,7 +532,7 @@ expect_equal(
 )
 ```
 
-#### D1.4.12: calculate 'cage_mass_mean_deviation_sd'
+#### D1.4.3: calculate 'cage_mass_mean_deviation_sd'
 
 Ask the AI:
 
@@ -662,50 +654,68 @@ ggplot2::ggplot(
 
 ### D1.6: Synthesis
 
-In these steps, we are combining knowledge.
+In these steps, we are combining the current knowledge with the
+paper.
 
+Tell the AI:
+
+```
+The data you've been working on was used in a scientific paper.
+The analyis you've done so far was used in the same scientific paper.
+Below this paragraph is the abstract of that scientific paper.
+Read it.
+
+Two distinct forms of natural selection promote adaptive biological
+diversity. Divergent selection occurs when different environments
+favour different phenotypes, leading to increased differences
+between populations. Negative frequency-dependent selection
+occurs when rare variants within a population are favoured over
+common ones, increasing diversity within populations. These
+two diversifying forces promote genetic variation at different
+spatial scales, and may act in opposition, but their relative effects
+remain unclear because they are rarely measured concurrently.
+Here we show that negative frequency-dependent selection within
+populations can favor rare immigrants over locally adapted
+residents. We reciprocally transplanted lake and stream ecotypes
+of threespine stickleback into lake and stream habitats, while
+manipulating the relative abundance of residents versus immigrants.
+We found negative frequency-dependence: survival was highest
+for the locally rare ecotype, rather than natives. Also, individuals
+with locally rare major histocompatibility complex (MHC) class
+IIb genotypes were infected by fewer parasites. This negative
+frequency-dependent selection will tend to favour rare immigrants
+over common residents, amplifying the effect of migration and
+undermining the efficacy of divergent natural selection to drive
+population differences. The only signal of divergent selection
+was a tendency for foreign fish to have higher parasite loads than
+residents, after controlling for MHC genotype rarity. Frequency-
+dependent ecological interactions have long been thought to
+promote speciation. Our results suggest a more nuanced view in
+which negative frequency dependence alters the fate of migrants to
+promote or constrain evolutionary divergence between populations.
+```
 
 ### D1.7: Reflection
 
+Not applicable.
 A trained AI does not need to reflect on its learning.
 
-### D1.8: Judgement
+## D2. **Q1**: Ask if the conclusion is correct
 
+Ask the AI:
 
+```
+The scientific paper describes a conclusion drawn from the data.
+The conclusion is that the extreme body masses
+are likelier to survive.
+Do you judge this to be a valid conclusion based on the data?
+```
 
+## D3 Alternative line of reasoning
 
+### D3.1 Analysis
 
-
-
-
-
-
-
-
-
-
-
-
-
-## **Q0**. Describe the conclusion
-
-- A conclusion drawn from the data
-  is that the extreme body masses
-  are likelier to survive. Would you agree that the data supports
-  this claim?
-
-
-## **Q1**: Ask if the conclusion is correct
-
-- A conclusion drawn from the data
-  is that the extreme body masses
-  are likelier to survive. Would you agree that the data supports
-  this claim?
-
-
-## D5 Reproduce the results that show a flaw in the reasoning
-
-### D5.1 Add relative standarized body mass
+#### D3.1.1 Add relative standarized body mass
 
 Ask the AI:
 
@@ -756,7 +766,9 @@ expect_equal(
 )
 ```
 
-### D5.2 Plot relative standarized body mass with same fit
+### D3.2 Evaluation
+
+### D3.2.1 Plot relative standarized body mass with same fit
 
 Ask the AI:
 
@@ -812,6 +824,7 @@ ggplot2::ggplot(
 ```
 
 The differences are:
+
 - this plot uses relative body masses, instead of absolute
 - the fit is parabolic, instead of binomial, as
   the latter is 
@@ -820,9 +833,29 @@ The differences are:
   that is shaped like a `U` (as is assumed in the original paper: the extreme
   body masses have the highest fitness)
 
-## **Q2**: Ask if the conclusion is correct
+### D3.3 Synthesis
 
-- A conclusion drawn from the data
-  is that the extreme body masses
-  are likelier to survive. Would you agree that the data supports
-  this claim?
+In these steps, we are combining the current knowledge with the
+paper.
+
+```
+We have just analysed the relative normalized body masses.
+Call this the alternative analysis.
+```
+
+### D3.4 Reflection
+
+Not applicable.
+
+## D4. **Q2**: Ask if the conclusion is correct
+
+Ask the AI:
+
+```
+The scientific paper describes a conclusion drawn from the data.
+The conclusion is that the extreme body masses
+are likelier to survive.
+Do you judge this to be a valid conclusion based on the data?
+
+Take into account the insights from the alternative analysis.
+```
