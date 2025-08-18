@@ -40,6 +40,10 @@ brackets in the raw text -->
 <!-- if you want a footnote, how do you do that Richèl? please answer here:
 í dnt know :-/
  -->
+<!-- if you want a comment that shows up in the rendered version, you use this
+???- info "followed by a first line that reveals the topic of it"
+    followed by four blank spaces
+ -->
 
 
 
