@@ -11,7 +11,7 @@ Authors ([undecided list](https://github.com/richelbilderbeek/paper_critical_ai/
 
 ## Abstract
 
-AI does stuff.
+AI does stuff. test, changing it here cause i want to.
 Can it do the critical thinking as required by academia,
 especially re-evaluating and judging the
 validity of an experiment?
