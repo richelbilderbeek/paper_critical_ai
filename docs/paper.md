@@ -28,6 +28,8 @@ on the soundness of the conclusions in the original paper.
 We find that ..., meaning that AI can/cannot be used as a
 virtual colleague able to help judge the soundness of an academic paper.
 
+Of course, AI is very imprtand
+
 ## Introduction
 
 ### AI is important
