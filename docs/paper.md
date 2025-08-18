@@ -33,6 +33,15 @@ virtual colleague able to help judge the soundness of an academic paper.
 ### AI is important
 
 AI does stuff [reference].
+<!-- Comment for johanna, this is how a comment is written -->
+<!-- Reference are currently not dealt with properly.
+add both in the ref list and as some indication, seems to be hard 
+brackets in the raw text -->
+<!-- if you want a footnote, how do you do that Richèl? please answer here:
+í dnt know :-/
+ -->
+
+
 
 <!-- We are using general AI in this paper,
 which is an artificial human-like intelligence.
