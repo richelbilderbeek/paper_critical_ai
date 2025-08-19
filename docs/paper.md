@@ -17,13 +17,12 @@ and more actors are relying on AI to provide insight and
 solve various problems. Crucially, higher education is 
 about critical thinking, and the question is what kind of 
 room is there for AI to support such activities, or indeed
-is AI a trojan horse or simply an echo chamber?   
+is AI a trojan horse or simply an echo chamber? 
 Our paper asks: Can it do the critical thinking as 
 required by academia, especially re-evaluating and judging the
 validity of an experiment? Here we test this on a paper 
-where such a re-evaluation
-and judgment would help us judge its soundness
-and conclusion.
+where such a re-evaluation and judgment would help us 
+judge its soundness and conclusion.
 We do so by guiding an AI to an expert level
 of critical thinking on that paper, in the process
 reproducing its results and judging its conclusion,
