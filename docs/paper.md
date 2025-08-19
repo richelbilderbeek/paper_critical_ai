@@ -11,11 +11,17 @@ Authors ([undecided list](https://github.com/richelbilderbeek/paper_critical_ai/
 
 ## Abstract
 
-AI does stuff. test, changing it here cause i want to.
-Can it do the critical thinking as required by academia,
-especially re-evaluating and judging the
-validity of an experiment?
-Here we test this on a paper where such a re-evaluation
+There is no doubt AI has changed the modern landscape. 
+It's impact on academia is manifold, and in society more 
+and more actors are relying on AI to provide insight and 
+solve various problems. Crucially, higher education is 
+about critical thinking, and the question is what kind of 
+room is there for AI to support such activities, or indeed
+is AI a trojan horse or simply an echo chamber?   
+Our paper asks: Can it do the critical thinking as 
+required by academia, especially re-evaluating and judging the
+validity of an experiment? Here we test this on a paper 
+where such a re-evaluation
 and judgment would help us judge its soundness
 and conclusion.
 We do so by guiding an AI to an expert level
