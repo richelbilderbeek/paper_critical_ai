@@ -307,11 +307,26 @@ Barbara Z. Larson, Christine Moser, Arran Caza, Katrin Muehlfeld, and
 Laura A. Colombo, 2024: Critical Thinking in the Age of Generative AI. 
 AMLE, 23, 373–378, https://doi.org/10.5465/amle.2024.0338
 
-Abolhasani, M., Brown, K.A. & Guest Editors. Role of AI in experimental materials science. MRS Bulletin 48, 134–141 (2023). https://doi.org/10.1557/s43577-023-00482-y
+Abolhasani, M., Brown, K.A. & Guest Editors. Role of AI in 
+experimental materials science. MRS Bulletin 48, 134–141 (2023). 
+https://doi.org/10.1557/s43577-023-00482-y
+
+Gerlich, M. AI Tools in Society: Impacts on Cognitive Offloading and 
+the Future of Critical Thinking. Societies 2025, 15, 6. 
+https://doi.org/10.3390/soc15010006
 
 https://arxiv.org/pdf/2403.12108
 
 https://www.nber.org/papers/w31679
+
+Unable to access this: "Critical Thinking in the Age of AI: 
+A Systematic Review of AI's Effects on Higher Education"
+by Rahyuni Melisa, Ashadi Ashadi, Anita Triastuti, Sari Hidayati, 
+Achmad Salido, Priska Efriani Luansi Ero, Cut Marlini, 
+Zefrin Zefrin, Zaki Al Fuad
+Educational Process: International Journal (EDUPIJ)
+Issue Year: 14/2025
+but it seems of interest to us.
 
 ## What research is already done in relation to AI
 what areas do we want to cover here? Some overlap with intro for sure
