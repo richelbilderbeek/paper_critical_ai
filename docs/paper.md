@@ -199,7 +199,11 @@ be able to (help) seek the truth, which is what we investigate
 in this paper.
 
 ### Humans do critical thinking when discussing academic papers
-
+[Johanna: To me this seems odd. What is the purpose of this paragraph?
+I would like to see it either be a section about case selection,
+in this case, paper selection. And then it should focus on that 
+argument. Or it should be more about the skills of humans more 
+generally]
 Humans sometimes discuss academic papers.
 During such an event, papers are examined critically.
 During a TRÊS literature club of around 2018,
