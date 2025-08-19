@@ -40,20 +40,47 @@ But structure of article will depend on journal we are submitting
 to. Do you have ideas there? do we want to go toward education
 or toward something more science focused? Most of the publications
 I find are situated in education, when I search for related topics]
-#### AI is important
 
-AI does stuff [reference].
+There is no doubt that AI has become increasingly important. We see its 
+use is politics, in teaching, in health care, in T, in X, and Y [references for each]. 
+Amidst hopes that AI can help both science and society forward, we also
+see growing concerns that AI is used as a shortcut and that there are 
+concerns that students are using AI to get a degree without an education [references].
+[one paragraph that claims AI is important. and AI does stuff [reference].]
 
-<!-- We are using general AI in this paper,
+[JS: do you mean generative AI?]<!-- We are using general AI in this paper,
 which is an artificial human-like intelligence.
 Add a reference to a paper that defines this -->
 
-#### Critical thinking is important
 To succeed in the 21st century, a human needs
-21st century skills.
+21st century skills. 
 Critical thinking is one for the four most important 21st century
-skills `[Spector & Ma, 2019]`.
+skills `[Spector & Ma, 2019]`. The question is if AI can support us
+with this particular skill. [Critical thinking is important
+paragraph]
 
+In this paper, we test to what extent AI can deliver on critical
+thinking. The goal of this paper is to measure the level of critical
+thinking of an AI in the context of an academic paper,
+following the framework of `[Spector & Ma, 2019]`.
+Assuming we can guide an AI to the highest level
+of critical thinking, we determine how well it achieves
+on the highest abilities (evaluation, synthesis, reflection and judgment)
+needed to achieve this level.
+
+To do so, we guide an AI to the highest level of critical thinking
+on an academic paper, following the storyline of that paper.
+First, we teach an AI the analysis of the paper and ask it to judge
+if the analysis is sound. Will it be gullible or will it point out already
+the same flaws that humans found?
+Second, we teach the AI an alternative line of thought, to make
+it re-evaluate the same analysis.
+Will it be able to change its judgment from some indirect
+hints from humans? [Research question paragraph]
+
+Our paper is structured in this way, and overall
+the paper shows X.
+This is important because. [final paragraph of Intro]
 
 ### AI is important
 
