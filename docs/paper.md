@@ -342,6 +342,22 @@ https://doi.org/10.1007/s12144-024-06795-8
 of Critical Thinking Skills in Students"
 published in European Research Studies Journal
 
+Adhikari, P., Hamal, P., & Jnr, F. B. (2024). Artificial 
+Intelligence in fraud detection: Revolutionizing financial 
+security. International Journal of Science and Research 
+Archive, 13(01), 1457-1472.
+
+Bello, O. A., & Olufemi, K. (2024). Artificial intelligence 
+in fraud prevention: Exploring techniques and applications 
+challenges and opportunities. Computer science & IT research 
+journal, 5(6), 1505-1520.
+
+Kharipova, R., Khaydarov, I., Akramova, S., Lutfullaeva, D., 
+Saidov, S., Erkinov, A., ... & Erkinova, N. (2024). The Role 
+of Artificial Intelligence Technologies in Evaluating the 
+Veracity of Scientific Research. Journal of Internet Services 
+and Information Security, 14(4), 554-568.
+
 ## What research is already done in relation to AI
 what areas do we want to cover here? Some overlap with intro for sure
 ## Framework for this paper, the taxonomy above
