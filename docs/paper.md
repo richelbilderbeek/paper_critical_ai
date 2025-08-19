@@ -38,7 +38,8 @@ virtual colleague able to help judge the soundness of an academic paper.
 Previous research section. I think RQ should be included in intro
 But structure of article will depend on journal we are submitting 
 to. Do you have ideas there? do we want to go toward education
-or toward something more science focused? ]
+or toward something more science focused? Most of the publications
+I find are situated in education, when I search for related topics]
 
 ### AI is important
 
@@ -241,6 +242,27 @@ Second, we teach the AI an alternative line of thought, to make
 it re-evaluate the same analysis.
 Will it be able to change its judgment from some indirect
 hints from humans?
+
+### Previous research
+[JS: I think we need to have a longer section here and some of the text 
+above should be moved here. For instance I think the framework details 
+above is needed here.
+I will also add some potential literature to include here]
+Muthmainnah,, Ibna Seraj, Prodhan Mahbub, Oteir, Ibrahim, 
+Playing with AI to Investigate Human-Computer Interaction Technology and 
+Improving Critical Thinking Skills to Pursue 21st Century Age, 
+Education Research International, 2022, 6468995, 17 pages, 2022. 
+https://doi.org/10.1155/2022/6468995
+Darwin, Rusdin, D., Mukminatien, N., Suryati, N., Laksmi, E. D., & Marzuki. (2023). 
+Critical thinking in the AI era: An exploration of EFL students’ perceptions, 
+benefits, and limitations. Cogent Education, 11(1). 
+https://doi.org/10.1080/2331186X.2023.2290342
+Barbara Z. Larson, Christine Moser, Arran Caza, Katrin Muehlfeld, and 
+Laura A. Colombo, 2024: Critical Thinking in the Age of Generative AI. 
+AMLE, 23, 373–378, https://doi.org/10.5465/amle.2024.0338
+## What research is already done in relation to AI
+what areas do we want to cover here? Some overlap with intro for sure
+## Framework for this paper, the taxonomy above
 
 ## Hypothesis
 
