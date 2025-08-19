@@ -40,7 +40,7 @@ But structure of article will depend on journal we are submitting
 to. Do you have ideas there? do we want to go toward education
 or toward something more science focused? Most of the publications
 I find are situated in education, when I search for related topics]
-# AI is important
+#### AI is important
 
 AI does stuff [reference].
 
@@ -48,7 +48,7 @@ AI does stuff [reference].
 which is an artificial human-like intelligence.
 Add a reference to a paper that defines this -->
 
-# Critical thinking is important
+#### Critical thinking is important
 To succeed in the 21st century, a human needs
 21st century skills.
 Critical thinking is one for the four most important 21st century
