@@ -328,6 +328,20 @@ Educational Process: International Journal (EDUPIJ)
 Issue Year: 14/2025
 but it seems of interest to us.
 
+Zhai, C., Wibowo, S. & Li, L.D. The effects of over-reliance 
+on AI dialogue systems on students' cognitive abilities: 
+a systematic review. Smart Learn. Environ. 11, 28 (2024). 
+https://doi.org/10.1186/s40561-024-00316-7
+
+Fabio, R.A., Plebe, A. & Suriano, R. AI-based chatbot 
+interactions and critical thinking skills: an exploratory study. 
+Curr Psychol 44, 8082–8095 (2025). 
+https://doi.org/10.1007/s12144-024-06795-8
+
+"The Impact of Artificial Intelligence on the Development
+of Critical Thinking Skills in Students"
+published in European Research Studies Journal
+
 ## What research is already done in relation to AI
 what areas do we want to cover here? Some overlap with intro for sure
 ## Framework for this paper, the taxonomy above
