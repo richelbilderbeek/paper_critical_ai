@@ -40,6 +40,20 @@ But structure of article will depend on journal we are submitting
 to. Do you have ideas there? do we want to go toward education
 or toward something more science focused? Most of the publications
 I find are situated in education, when I search for related topics]
+# AI is important
+
+AI does stuff [reference].
+
+<!-- We are using general AI in this paper,
+which is an artificial human-like intelligence.
+Add a reference to a paper that defines this -->
+
+# Critical thinking is important
+To succeed in the 21st century, a human needs
+21st century skills.
+Critical thinking is one for the four most important 21st century
+skills `[Spector & Ma, 2019]`.
+
 
 ### AI is important
 
@@ -209,7 +223,7 @@ in this paper.
 I would like to see it either be a section about case selection,
 in this case, paper selection. And then it should focus on that 
 argument. Or it should be more about the skills of humans more 
-generally]
+generally, in terms of critical thinking]
 Humans sometimes discuss academic papers.
 During such an event, papers are examined critically.
 During a TRÊS literature club of around 2018,
@@ -248,18 +262,28 @@ hints from humans?
 above should be moved here. For instance I think the framework details 
 above is needed here.
 I will also add some potential literature to include here]
+
 Muthmainnah,, Ibna Seraj, Prodhan Mahbub, Oteir, Ibrahim, 
 Playing with AI to Investigate Human-Computer Interaction Technology and 
 Improving Critical Thinking Skills to Pursue 21st Century Age, 
 Education Research International, 2022, 6468995, 17 pages, 2022. 
 https://doi.org/10.1155/2022/6468995
+
 Darwin, Rusdin, D., Mukminatien, N., Suryati, N., Laksmi, E. D., & Marzuki. (2023). 
 Critical thinking in the AI era: An exploration of EFL students’ perceptions, 
 benefits, and limitations. Cogent Education, 11(1). 
 https://doi.org/10.1080/2331186X.2023.2290342
+
 Barbara Z. Larson, Christine Moser, Arran Caza, Katrin Muehlfeld, and 
 Laura A. Colombo, 2024: Critical Thinking in the Age of Generative AI. 
 AMLE, 23, 373–378, https://doi.org/10.5465/amle.2024.0338
+
+Abolhasani, M., Brown, K.A. & Guest Editors. Role of AI in experimental materials science. MRS Bulletin 48, 134–141 (2023). https://doi.org/10.1557/s43577-023-00482-y
+
+https://arxiv.org/pdf/2403.12108
+
+https://www.nber.org/papers/w31679
+
 ## What research is already done in relation to AI
 what areas do we want to cover here? Some overlap with intro for sure
 ## Framework for this paper, the taxonomy above
