@@ -126,3 +126,7 @@ Lutfullaeva
 Saidov
 Erkinov
 Erkinova
+<htmlcontent> docs/paper.md: html>body>p
+Curr
+Psychol
+chatbot
