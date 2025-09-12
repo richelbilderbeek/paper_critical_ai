@@ -11,17 +11,17 @@ Authors ([undecided list](https://github.com/richelbilderbeek/paper_critical_ai/
 
 ## Abstract
 
-There is no doubt AI has changed the modern landscape. 
-It's impact on academia is manifold, and in society more 
-and more actors are relying on AI to provide insight and 
-solve various problems. Crucially, higher education is 
-about critical thinking, and the question is what kind of 
+There is no doubt AI has changed the modern landscape.
+It's impact on academia is manifold, and in society more
+and more actors are relying on AI to provide insight and
+solve various problems. Crucially, higher education is
+about critical thinking, and the question is what kind of
 room is there for AI to support such activities, or indeed
-is AI a trojan horse or simply an echo chamber? 
-Our paper asks: Can it do the critical thinking as 
+is AI a trojan horse or simply an echo chamber?
+Our paper asks: Can it do the critical thinking as
 required by academia, especially re-evaluating and judging the
-validity of an experiment? Here we test this on a paper 
-where such a re-evaluation and judgment would help us 
+validity of an experiment? Here we test this on a paper
+where such a re-evaluation and judgment would help us
 judge its soundness and conclusion.
 We do so by guiding an AI to an expert level
 of critical thinking on that paper, in the process
@@ -36,17 +36,18 @@ virtual colleague able to help judge the soundness of an academic paper.
 Of course, AI is very imprtand
 
 ## Introduction
+
 [JS: I think we need to separate our introduction from our
 Previous research section. I think RQ should be included in intro
-But structure of article will depend on journal we are submitting 
+But structure of article will depend on journal we are submitting
 to. Do you have ideas there? do we want to go toward education
 or toward something more science focused? Most of the publications
 I find are situated in education, when I search for related topics]
 
-There is no doubt that AI has become increasingly important. We see its 
-use is politics, in teaching, in health care, in T, in X, and Y [references for each]. 
+There is no doubt that AI has become increasingly important. We see its
+use is politics, in teaching, in health care, in T, in X, and Y [references for each].
 Amidst hopes that AI can help both science and society forward, we also
-see growing concerns that AI is used as a shortcut and that there are 
+see growing concerns that AI is used as a shortcut and that there are
 concerns that students are using AI to get a degree without an education [references].
 [one paragraph that claims AI is important. and AI does stuff [reference].]
 
@@ -55,7 +56,7 @@ which is an artificial human-like intelligence.
 Add a reference to a paper that defines this -->
 
 To succeed in the 21st century, a human needs
-21st century skills. 
+21st century skills.
 Critical thinking is one for the four most important 21st century
 skills `[Spector & Ma, 2019]`. The question is if AI can support us
 with this particular skill. [Critical thinking is important
@@ -100,10 +101,9 @@ brackets in the raw text -->
  -->
 
 ???- info "test by Johanna"
-    if you want to display more info about something, 
+    if you want to display more info about something,
     that is a placeholder for now
     you can use this
-
 
 
 <!-- We are using general AI in this paper,
@@ -248,10 +248,11 @@ be able to (help) seek the truth, which is what we investigate
 in this paper.
 
 ### Humans do critical thinking when discussing academic papers
+
 [Johanna: To me this seems odd. What is the purpose of this paragraph?
 I would like to see it either be a section about case selection,
-in this case, paper selection. And then it should focus on that 
-argument. Or it should be more about the skills of humans more 
+in this case, paper selection. And then it should focus on that
+argument. Or it should be more about the skills of humans more
 generally, in terms of critical thinking]
 Humans sometimes discuss academic papers.
 During such an event, papers are examined critically.
@@ -287,79 +288,82 @@ Will it be able to change its judgment from some indirect
 hints from humans?
 
 ### Previous research
-[JS: I think we need to have a longer section here and some of the text 
-above should be moved here. For instance I think the framework details 
+
+[JS: I think we need to have a longer section here and some of the text
+above should be moved here. For instance I think the framework details
 above is needed here.
 I will also add some potential literature to include here]
 
-Muthmainnah,, Ibna Seraj, Prodhan Mahbub, Oteir, Ibrahim, 
-Playing with AI to Investigate Human-Computer Interaction Technology and 
-Improving Critical Thinking Skills to Pursue 21st Century Age, 
-Education Research International, 2022, 6468995, 17 pages, 2022. 
-https://doi.org/10.1155/2022/6468995
+Muthmainnah,, Ibna Seraj, Prodhan Mahbub, Oteir, Ibrahim,
+Playing with AI to Investigate Human-Computer Interaction Technology and
+Improving Critical Thinking Skills to Pursue 21st Century Age,
+Education Research International, 2022, 6468995, 17 pages, 2022.
+<https://doi.org/10.1155/2022/6468995>
 
-Darwin, Rusdin, D., Mukminatien, N., Suryati, N., Laksmi, E. D., & Marzuki. (2023). 
-Critical thinking in the AI era: An exploration of EFL students’ perceptions, 
-benefits, and limitations. Cogent Education, 11(1). 
-https://doi.org/10.1080/2331186X.2023.2290342
+Darwin, Rusdin, D., Mukminatien, N., Suryati, N., Laksmi, E. D., & Marzuki. (2023).
+Critical thinking in the AI era: An exploration of EFL students’ perceptions,
+benefits, and limitations. Cogent Education, 11(1).
+<https://doi.org/10.1080/2331186X.2023.2290342>
 
-Barbara Z. Larson, Christine Moser, Arran Caza, Katrin Muehlfeld, and 
-Laura A. Colombo, 2024: Critical Thinking in the Age of Generative AI. 
-AMLE, 23, 373–378, https://doi.org/10.5465/amle.2024.0338
+Barbara Z. Larson, Christine Moser, Arran Caza, Katrin Muehlfeld, and
+Laura A. Colombo, 2024: Critical Thinking in the Age of Generative AI.
+AMLE, 23, 373–378, <https://doi.org/10.5465/amle.2024.0338>
 
-Abolhasani, M., Brown, K.A. & Guest Editors. Role of AI in 
-experimental materials science. MRS Bulletin 48, 134–141 (2023). 
-https://doi.org/10.1557/s43577-023-00482-y
+Abolhasani, M., Brown, K.A. & Guest Editors. Role of AI in
+experimental materials science. MRS Bulletin 48, 134–141 (2023).
+<https://doi.org/10.1557/s43577-023-00482-y>
 
-Gerlich, M. AI Tools in Society: Impacts on Cognitive Offloading and 
-the Future of Critical Thinking. Societies 2025, 15, 6. 
-https://doi.org/10.3390/soc15010006
+Gerlich, M. AI Tools in Society: Impacts on Cognitive Offloading and
+the Future of Critical Thinking. Societies 2025, 15, 6.
+<https://doi.org/10.3390/soc15010006>
 
-https://arxiv.org/pdf/2403.12108
+<https://arxiv.org/pdf/2403.12108>
 
-https://www.nber.org/papers/w31679
+<https://www.nber.org/papers/w31679>
 
-Unable to access this: "Critical Thinking in the Age of AI: 
+Unable to access this: "Critical Thinking in the Age of AI:
 A Systematic Review of AI's Effects on Higher Education"
-by Rahyuni Melisa, Ashadi Ashadi, Anita Triastuti, Sari Hidayati, 
-Achmad Salido, Priska Efriani Luansi Ero, Cut Marlini, 
+by Rahyuni Melisa, Ashadi Ashadi, Anita Triastuti, Sari Hidayati,
+Achmad Salido, Priska Efriani Luansi Ero, Cut Marlini,
 Zefrin Zefrin, Zaki Al Fuad
 Educational Process: International Journal (EDUPIJ)
 Issue Year: 14/2025
 but it seems of interest to us.
 
-Zhai, C., Wibowo, S. & Li, L.D. The effects of over-reliance 
-on AI dialogue systems on students' cognitive abilities: 
-a systematic review. Smart Learn. Environ. 11, 28 (2024). 
-https://doi.org/10.1186/s40561-024-00316-7
+Zhai, C., Wibowo, S. & Li, L.D. The effects of over-reliance
+on AI dialogue systems on students' cognitive abilities:
+a systematic review. Smart Learn. Environ. 11, 28 (2024).
+<https://doi.org/10.1186/s40561-024-00316-7>
 
-Fabio, R.A., Plebe, A. & Suriano, R. AI-based chatbot 
-interactions and critical thinking skills: an exploratory study. 
-Curr Psychol 44, 8082–8095 (2025). 
-https://doi.org/10.1007/s12144-024-06795-8
+Fabio, R.A., Plebe, A. & Suriano, R. AI-based chatbot
+interactions and critical thinking skills: an exploratory study.
+Curr Psychol 44, 8082–8095 (2025).
+<https://doi.org/10.1007/s12144-024-06795-8>
 
 "The Impact of Artificial Intelligence on the Development
 of Critical Thinking Skills in Students"
 published in European Research Studies Journal
 
-Adhikari, P., Hamal, P., & Jnr, F. B. (2024). Artificial 
-Intelligence in fraud detection: Revolutionizing financial 
-security. International Journal of Science and Research 
+Adhikari, P., Hamal, P., & Jnr, F. B. (2024). Artificial
+Intelligence in fraud detection: Revolutionizing financial
+security. International Journal of Science and Research
 Archive, 13(01), 1457-1472.
 
-Bello, O. A., & Olufemi, K. (2024). Artificial intelligence 
-in fraud prevention: Exploring techniques and applications 
-challenges and opportunities. Computer science & IT research 
+Bello, O. A., & Olufemi, K. (2024). Artificial intelligence
+in fraud prevention: Exploring techniques and applications
+challenges and opportunities. Computer science & IT research
 journal, 5(6), 1505-1520.
 
-Kharipova, R., Khaydarov, I., Akramova, S., Lutfullaeva, D., 
-Saidov, S., Erkinov, A., ... & Erkinova, N. (2024). The Role 
-of Artificial Intelligence Technologies in Evaluating the 
-Veracity of Scientific Research. Journal of Internet Services 
+Kharipova, R., Khaydarov, I., Akramova, S., Lutfullaeva, D.,
+Saidov, S., Erkinov, A., ... & Erkinova, N. (2024). The Role
+of Artificial Intelligence Technologies in Evaluating the
+Veracity of Scientific Research. Journal of Internet Services
 and Information Security, 14(4), 554-568.
 
 ## What research is already done in relation to AI
+
 what areas do we want to cover here? Some overlap with intro for sure
+
 ## Framework for this paper, the taxonomy above
 
 ## Hypothesis
